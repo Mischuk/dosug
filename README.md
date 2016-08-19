@@ -60,14 +60,19 @@ frontend/                               # Корень проекта
 │           │   ├── layout.styl         # Основая сетка
 │           │   ├── mixins.styl         # Миксины
 │           │   ├── reset.styl          # Сброс стилей
+│           │   ├── typography.styl     # Типография
 │           │   └── variables.styl      # Переменные проекта
 │           ├── components              # Глобальные компоненты
 │           └── app.styl                # Точка сборки styl файлов
+├── task                                # ТЗ, PSD макеты, todo списки
+├── themes                              # Готовые шаблоны
 ├── tmp                                 # Каталог с временным файлами
 ├── zip                                 # Каталог с zip архивами
-├── .csscomb.json                       # Игнорирование файлов в Git
+├── .csscomb.json                       # Конфиг для CSSComb
+├── .gitignore / .npmingrone            # Игнорирование каталог/файлов
+├── command.cmd                         # Командная строка в текущем каталоге
 ├── gulpfile.js                         # Конфиг для Gulp
-├── package.json                        # Зависимости для node.js
+├── package.json                        # Зависимости проекта
 └── README.md                           # Файл, который вы читаете
 ```
 
