@@ -1,0 +1,23 @@
+- var project = '2dosug98.com'
+doctype html
+html(lang="ru").js
+  head
+    block title
+      title Default title
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="msapplication-tap-highlight" content="no")
+    link(rel="icon" href="favicon.ico" type="image/x-icon")
+    link(rel="stylesheet" href=project+"/css/plugins.css")
+    link(rel="stylesheet" href=project+"/css/app.css")
+    script(src=project+'/js/modernizr.js')
+  body
+    include ../modals/modals
+    include ../header/m_header
+    block content
+    include ../footer/m_footer
+    // JS
+    script(src=project+'/js/jquery.min.js')
+    script(src=project+'/js/plugins.js')
+    script(src=project+'/js/app.js')
