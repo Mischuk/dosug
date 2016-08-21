@@ -1,5 +1,5 @@
 $(function() {
-    $('a[href="#"]').click(function(e){ e.preventDefault(); });
+    $('a[href="#"]').click(function(e){e.preventDefault(); });
 
     // Polyfill to remove click delays on browsers with touch UIs
     FastClick.attach(document.body);
@@ -55,6 +55,30 @@ $(function() {
     };
     detectIE();
 
+    /*!
+     * IE10 viewport hack for Surface/desktop Windows 8 bug
+     * Copyright 2014-2015 Twitter, Inc.
+     * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+     */
+
+    // See the Getting Started docs for more information:
+    // http://getbootstrap.com/getting-started/#support-ie10-width
+
+    (function () {
+      'use strict';
+
+      if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement('style')
+        msViewportStyle.appendChild(
+          document.createTextNode(
+            '@-ms-viewport{width:auto!important}'
+          )
+        )
+        document.querySelector('head').appendChild(msViewportStyle)
+      }
+
+    })();
+
     // Mask for form's input
     function inputMask() {
       $(".mask-date").mask("99.99.9999",{placeholder:"__.__.____"});
@@ -83,13 +107,55 @@ $(function() {
 
     
 
+    // Close
+
+    function closeSubway() {
+
+      $('.background-layout').removeClass('open');
+
+      $('.subway a, .m_subway-list').removeClass('open');
+
+    };
+
+    
+
+    function closeMenu() {
+
+      $('.background-layout').removeClass('open');
+
+      $('.mobile-menu-trigger').removeClass('open');
+
+      $('.mobile-menu-trigger').next().removeClass('open');
+
+    };
+
+    
+
+    // Menu
+
     function mobileMenu() {
 
       $('.mobile-menu-trigger').on('click', function(){
 
-        $(this).toggleClass('open');
+        if ( $(this).hasClass('open') ) {
 
-        $('.m_header .nav').toggleClass('open');
+          $(this).removeClass('open');
+
+          $(this).next().removeClass('open');
+
+          $('.background-layout').removeClass('open');
+
+        } else {
+
+          closeSubway();
+
+          $(this).addClass('open');
+
+          $(this).next().addClass('open');
+
+          $('.background-layout').addClass('open');
+
+        }
 
       });
 
@@ -99,7 +165,119 @@ $(function() {
 
     
 
+    // Subway
+
+    function mobileSubway() {
+
+      $('.subway a').on('click', function(){
+
+        if ( $(this).hasClass('open') ) {
+
+          $(this).removeClass('open');
+
+          $('.m_subway-list').removeClass('open');
+
+          $('.background-layout').removeClass('open');
+
+        } else {
+
+          closeMenu();
+
+          $(this).addClass('open');
+
+          $('.m_subway-list').addClass('open');
+
+          $('.background-layout').addClass('open');
+
+        }
+
+      });
+
+    };
+
+    mobileSubway();
+
+    
+
+    // Background layout
+
+    function bgLayout() {
+
+      $('.background-layout').on('click', function(){
+
+          // This close
+
+          $(this).removeClass('open');
+
+          closeSubway();
+
+          closeMenu();
+
+      });
+
+    };
+
+    bgLayout();
+
     
 
     console.log('Layout generated');
+
+    
+
+    function popups() {
+
+      $('.call-popup').magnificPopup({
+
+        type: 'inline',
+
+        fixedContentPos: false,
+
+        fixedBgPos: true,
+
+        overflowY: 'auto',
+
+        closeBtnInside: true,
+
+        preloader: false,
+
+        midClick: true,
+
+        removalDelay: 300,
+
+        mainClass: 'my-mfp-zoom-in'
+
+      });
+
+    
+
+      $('.recovery-password-popup').on('click', function(){
+
+        $.magnificPopup.close();
+
+        setTimeout(function(){
+
+          $('.recovery-trigger').trigger('click');
+
+        }, 300);
+
+      });
+
+    
+
+      $('.signin-popup').on('click', function(){
+
+        $.magnificPopup.close();
+
+        setTimeout(function(){
+
+          $('.signin-trigger').trigger('click');
+
+        }, 300);
+
+      });
+
+    };
+
+    popups();
 });

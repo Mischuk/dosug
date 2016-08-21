@@ -1,2 +1,84 @@
 .m_footer
-  background #333
+  position absolute
+  bottom 0
+  width 100%
+  background #161616
+  color $base-text-light
+  @media screen and (min-width: 992px)
+    padding-top 25px
+  a
+    color #ccc
+    &:hover
+      color #fff
+      text-decoration underline
+  ul
+    li
+      position relative
+      padding-left 15px
+      &:after
+        content ''
+        size(5px)
+        border-radius 50%
+        background #ff3333
+        position absolute
+        left 0
+        top 8px
+      a
+        display inline-block
+        vertical-align middle
+        padding 4px 0
+  .logo
+    overflow hidden
+    width 275px
+    height 93px
+    margin 0 auto
+    background #1d1d1d
+    border-radius 0 0 $radius $radius
+    @media screen and (min-width: 992px)
+      position absolute
+      left 15px
+      top -25px
+    @media screen and (min-width: 1250px)
+      left -6px
+    a
+      background url("../images/footer-logo.png") no-repeat 50%
+  .copyright
+    display block
+    text-align center
+    margin-top 35px
+    @media screen and (min-width: 992px)
+      position absolute
+      right 15px
+      top 0
+      margin-top 0
+      text-align right
+  .center
+    @media screen and (min-width: 992px)
+      clearfix()
+      padding 0 300px
+    @media screen and (min-width: 1250px)
+      padding 0 279px
+    nav,
+    .latest-articles
+      display none
+      @media screen and (min-width: 992px)
+        display block
+    nav
+      @media screen and (min-width: 992px)
+        float left
+        width 30%
+    .latest-articles
+      @media screen and (min-width: 992px)
+        float left
+        width 70%
+        padding-left 10%
+      @media screen and (min-width: 1200px)
+        padding-left 2%
+      .title
+        margin-bottom 10px
+      a
+        text-decoration underline
+
+
+
+

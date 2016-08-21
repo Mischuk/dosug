@@ -1,6 +1,6 @@
 - var project = '2dosug98.com'
 doctype html
-html(lang="ru").js
+html(lang="ru").no-js
   head
     block title
       title Default title
@@ -8,13 +8,16 @@ html(lang="ru").js
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(name="msapplication-tap-highlight" content="no")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&subset=cyrillic" rel="stylesheet")
     link(rel="icon" href="favicon.ico" type="image/x-icon")
     link(rel="stylesheet" href=project+"/css/plugins.css")
     link(rel="stylesheet" href=project+"/css/app.css")
     script(src=project+'/js/modernizr.js')
   body
+    .background-layout
     include ../modals/modals
-    include ../header/m_header
+    //- include ../header/m_header
+    block header
     block content
     include ../footer/m_footer
     // JS

@@ -1,22 +1,43 @@
 /*!=========================
       Base grid styles
 ==========================*/
+$footer = 205px
+$wrapper = 1210px
+
+
 html
   position relative
   min-height 100%
-  background #393939
 body
-  font-size 16px
+  font-family 'Open Sans', sans-serif
+  font-size 14px
   line-height 1.2
   color #000
   background #fff
-
+  margin-bottom $footer
+  background url("../images/background.png") repeat 0 0
+footer
+  height $footer
 .wrapper
   clearfix()
   position relative
-  width $wrapper
+  max-width $wrapper
   height 100%
   padding-left 15px
   padding-right 15px
   margin-left auto
   margin-right auto
+
+.background-layout
+  anim()
+  left 0
+  top 0
+  width 100%
+  height 100%
+  background rgba(0,0,0,.8)
+  z-index 200
+  opacity 0
+  position static
+  &.open
+    position fixed
+    opacity 1

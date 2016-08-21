@@ -1,0 +1,46 @@
+$base = #810000
+
+.m_subway-list
+  anim()
+  z-index 250
+  position relative
+  background $base
+  border-top 1px solid $base - 25%
+  transform translateY(-200%)
+  &.open
+    transform translateY(0%)
+  &:after,
+  &:before
+    content ''
+    position absolute
+    left 0
+    width 100%
+    height 40px
+    z-index 5
+  &:before
+    top 49px
+    box-shadow inset 0 40px 20px -20px rgb(97, 0, 0)
+  &:after
+    bottom 0
+    box-shadow inset 0 -40px 20px -20px rgb(97, 0, 0)
+  .wrapper
+    padding 0
+  .title
+    color #fff
+    font-weight bold
+    font-size 16px
+    padding 0 15px
+    height 50px
+    line-height 50px
+  ul
+    max-height 240px
+    overflow auto
+    padding 15px 0
+    li
+      a
+        display block
+        padding 7px 15px
+        font-size 16px
+        color #fff
+        &:hover
+          text-decoration underline

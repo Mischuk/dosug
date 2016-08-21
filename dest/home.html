@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="js" lang="ru">
+<html class="no-js" lang="ru">
 
 	<head>
 		<title>Главная</title>
@@ -7,6 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="msapplication-tap-highlight" content="no">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&amp;subset=cyrillic" rel="stylesheet">
 		<link type="image/x-icon" href="favicon.ico" rel="icon">
 		<link href="2dosug98.com/css/plugins.css" rel="stylesheet">
 		<link href="2dosug98.com/css/app.css" rel="stylesheet">
@@ -14,12 +15,735 @@
 	</head>
 
 	<body>
+		<div class="background-layout"></div>
 		<!-- Modals-->
-		<!-- Header-->
-		<header class="m_header">header</header>
-		<h1>Hello, world!</h1>
-		<!-- Footer-->
-		<footer class="m_footer">footer</footer>
+		<div class="m_popups">
+			<!-- Signin popup-->
+			<a class="call-popup signin-trigger" href="#popup-signin"></a>
+			<div class="popup mfp-hide zoom-anim-dialog" id="popup-signin">
+				<div class="modal-heading">Вход в кабинет</div>
+				<form>
+					<div class="row">
+						<label>
+							<span class="label">Email:</span>
+							<div class="input required">
+								<input type="email" placeholder="Email">
+							</div>
+						</label>
+					</div>
+					<div class="row">
+						<div class="column">
+							<label>
+								<span class="label">Пароль:</span>
+								<div class="input required">
+									<input type="password" placeholder="Ваш пароль">
+								</div>
+							</label>
+						</div>
+						<div class="column">
+							<div class="submit">
+								<input class="submit" type="submit" value="Войти">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="options">
+							<a class="recovery-password-popup" href="#">Забыли пароль?</a>
+							<a class="signup-popup" href="#">Зарегистрироваться</a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- Recovery password popup-->
+			<a class="call-popup recovery-trigger" href="#popup-recovery-passsword"></a>
+			<div class="popup mfp-hide zoom-anim-dialog" id="popup-recovery-passsword">
+				<div class="modal-heading">Восстановление пароля</div>
+				<form>
+					<div class="row">
+						<label>
+							<span class="label">Email:</span>
+							<div class="input required">
+								<input type="email" placeholder="Email">
+							</div>
+						</label>
+					</div>
+					<div class="row">
+						<div class="submit">
+							<input class="submit" type="submit" value="Восстановить">
+						</div>
+					</div>
+					<div class="row">
+						<div class="options">
+							<a class="signin-popup" href="#">Войти</a>
+							<a class="signup-popup" href="#">Зарегистрироваться</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<header class="m_header">
+			<div class="top">
+				<div class="wrapper">
+					<div class="logo">
+						<a href="#"></a>
+					</div>
+					<div class="subway">
+						<a href="#">
+							<span class="icon-subway"></span>
+							<span class="label">
+								<span class="xs-visible">Метро</span>
+								<span class="xs-hidden">Выбрать метро</span>
+							</span>
+						</a>
+					</div>
+					<div class="signin">
+						<a class="call-popup" href="#popup-signin">
+							<span class="s-icon-signin"></span>
+							<span class="label">
+								<span class="xs-visible">Кабинет</span>
+								<span class="xs-hidden">Вход в кабинет</span>
+							</span>
+						</a>
+					</div>
+					<div class="lang">
+						<a class="current" href="#">RU</a>
+						<a href="#">ENG</a>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="wrapper">
+					<nav class="menu">
+						<a class="mobile-menu-trigger" href="#">
+							<span></span>
+						</a>
+						<ul>
+							<li>
+								<a href="#">ИНДИВИДУАЛКИ</a>
+							</li>
+							<li>
+								<a href="#">МАССАЖИСТКИ</a>
+							</li>
+							<li>
+								<a href="#">ИНТИМ-КАРТА</a>
+							</li>
+							<li>
+								<a href="#">ПОДБОР АНКЕТ</a>
+							</li>
+							<li>
+								<a href="#">ФОРУМ</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="filters">
+				<div class="wrapper">
+					<a class="mobile-filters-trigger">
+						<span class="icon-search"></span>
+					</a>
+					<div class="m_filters">
+						<form>form</form>
+						<div class="advanced-search">
+							<a href="#">Расширенный поиск</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="m_subway-list">
+			<div class="wrapper">
+				<div class="title">Выберите станцию метро:</div>
+				<ul>
+					<li>
+						<a href="#">Авиамоторная</a>
+					</li>
+					<li>
+						<a href="#">Автозаводская</a>
+					</li>
+					<li>
+						<a href="#">Академическая</a>
+					</li>
+					<li>
+						<a href="#">Александровский сад</a>
+					</li>
+					<li>
+						<a href="#">Алексеевская</a>
+					</li>
+					<li>
+						<a href="#">Алма-Атинская</a>
+					</li>
+					<li>
+						<a href="#">Алтуфьево</a>
+					</li>
+					<li>
+						<a href="#">Аннино</a>
+					</li>
+					<li>
+						<a href="#">Арбатская</a>
+					</li>
+					<li>
+						<a href="#">Аэропорт</a>
+					</li>
+					<li>
+						<a href="#">Бабушкинская</a>
+					</li>
+					<li>
+						<a href="#">Багратионовская</a>
+					</li>
+					<li>
+						<a href="#">Баррикадная</a>
+					</li>
+					<li>
+						<a href="#">Бауманская</a>
+					</li>
+					<li>
+						<a href="#">Беговая</a>
+					</li>
+					<li>
+						<a href="#">Белорусская</a>
+					</li>
+					<li>
+						<a href="#">Беляево</a>
+					</li>
+					<li>
+						<a href="#">Бибирево</a>
+					</li>
+					<li>
+						<a href="#">Библиотека имени Ленина</a>
+					</li>
+					<li>
+						<a href="#">Битцевский парк</a>
+					</li>
+					<li>
+						<a href="#">Борисово</a>
+					</li>
+					<li>
+						<a href="#">Боровицкая</a>
+					</li>
+					<li>
+						<a href="#">Ботанический сад</a>
+					</li>
+					<li>
+						<a href="#">Братиславская</a>
+					</li>
+					<li>
+						<a href="#">Бульвар адмирала Ушакова</a>
+					</li>
+					<li>
+						<a href="#">Бульвар Дмитрия Донского</a>
+					</li>
+					<li>
+						<a href="#">Бунинская аллея</a>
+					</li>
+					<li>
+						<a href="#">Варшавская</a>
+					</li>
+					<li>
+						<a href="#">ВДНХ</a>
+					</li>
+					<li>
+						<a href="#">Владыкино</a>
+					</li>
+					<li>
+						<a href="#">Водный стадион</a>
+					</li>
+					<li>
+						<a href="#">Войковская</a>
+					</li>
+					<li>
+						<a href="#">Волгоградский проспект</a>
+					</li>
+					<li>
+						<a href="#">Волжская</a>
+					</li>
+					<li>
+						<a href="#">Волоколамская</a>
+					</li>
+					<li>
+						<a href="#">Воробьевы горы</a>
+					</li>
+					<li>
+						<a href="#">Выставочная</a>
+					</li>
+					<li>
+						<a href="#">Выхино</a>
+					</li>
+					<li>
+						<a href="#">Деловой центр</a>
+					</li>
+					<li>
+						<a href="#">Динамо</a>
+					</li>
+					<li>
+						<a href="#">Дмитровская</a>
+					</li>
+					<li>
+						<a href="#">Добрынинская</a>
+					</li>
+					<li>
+						<a href="#">Домодедовская</a>
+					</li>
+					<li>
+						<a href="#">Достоевская</a>
+					</li>
+					<li>
+						<a href="#">Дубровка</a>
+					</li>
+					<li>
+						<a href="#">Жулебино</a>
+					</li>
+					<li>
+						<a href="#">Зябликово</a>
+					</li>
+					<li>
+						<a href="#">Измайловская</a>
+					</li>
+					<li>
+						<a href="#">Калужская</a>
+					</li>
+					<li>
+						<a href="#">Кантемировская</a>
+					</li>
+					<li>
+						<a href="#">Каховская</a>
+					</li>
+					<li>
+						<a href="#">Каширская</a>
+					</li>
+					<li>
+						<a href="#">Киевская</a>
+					</li>
+					<li>
+						<a href="#">Китай-город</a>
+					</li>
+					<li>
+						<a href="#">Кожуховская</a>
+					</li>
+					<li>
+						<a href="#">Коломенская</a>
+					</li>
+					<li>
+						<a href="#">Комсомольская</a>
+					</li>
+					<li>
+						<a href="#">Коньково</a>
+					</li>
+					<li>
+						<a href="#">Красногвардейская</a>
+					</li>
+					<li>
+						<a href="#">Краснопресненская</a>
+					</li>
+					<li>
+						<a href="#">Красносельская</a>
+					</li>
+					<li>
+						<a href="#">Красные ворота</a>
+					</li>
+					<li>
+						<a href="#">Крестьянская застава</a>
+					</li>
+					<li>
+						<a href="#">Кропоткинская</a>
+					</li>
+					<li>
+						<a href="#">Крылатское</a>
+					</li>
+					<li>
+						<a href="#">Кузнецкий мост</a>
+					</li>
+					<li>
+						<a href="#">Кузьминки</a>
+					</li>
+					<li>
+						<a href="#">Кунцевская</a>
+					</li>
+					<li>
+						<a href="#">Курская</a>
+					</li>
+					<li>
+						<a href="#">Кутузовская</a>
+					</li>
+					<li>
+						<a href="#">Ленинский проспект</a>
+					</li>
+					<li>
+						<a href="#">Лермонтовский проспект</a>
+					</li>
+					<li>
+						<a href="#">Лесопарковая</a>
+					</li>
+					<li>
+						<a href="#">Лубянка</a>
+					</li>
+					<li>
+						<a href="#">Люблино</a>
+					</li>
+					<li>
+						<a href="#">Марксистская</a>
+					</li>
+					<li>
+						<a href="#">Марьина роща</a>
+					</li>
+					<li>
+						<a href="#">Марьино</a>
+					</li>
+					<li>
+						<a href="#">Маяковская</a>
+					</li>
+					<li>
+						<a href="#">Медведково</a>
+					</li>
+					<li>
+						<a href="#">Международная</a>
+					</li>
+					<li>
+						<a href="#">Менделеевская</a>
+					</li>
+					<li>
+						<a href="#">Митино</a>
+					</li>
+					<li>
+						<a href="#">Молодежная</a>
+					</li>
+					<li>
+						<a href="#">Мякинино</a>
+					</li>
+					<li>
+						<a href="#">Нагатинская</a>
+					</li>
+					<li>
+						<a href="#">Нагорная</a>
+					</li>
+					<li>
+						<a href="#">Нахимовский проспект</a>
+					</li>
+					<li>
+						<a href="#">Новогиреево</a>
+					</li>
+					<li>
+						<a href="#">Новокосино</a>
+					</li>
+					<li>
+						<a href="#">Новокузнецкая</a>
+					</li>
+					<li>
+						<a href="#">Новослободская</a>
+					</li>
+					<li>
+						<a href="#">Новоясеневская</a>
+					</li>
+					<li>
+						<a href="#">Новые Черемушки</a>
+					</li>
+					<li>
+						<a href="#">Октябрьская</a>
+					</li>
+					<li>
+						<a href="#">Октябрьское поле</a>
+					</li>
+					<li>
+						<a href="#">Орехово</a>
+					</li>
+					<li>
+						<a href="#">Отрадное</a>
+					</li>
+					<li>
+						<a href="#">Охотный ряд</a>
+					</li>
+					<li>
+						<a href="#">Павелецкая</a>
+					</li>
+					<li>
+						<a href="#">Парк культуры</a>
+					</li>
+					<li>
+						<a href="#">Парк Победы</a>
+					</li>
+					<li>
+						<a href="#">Партизанская</a>
+					</li>
+					<li>
+						<a href="#">Первомайская</a>
+					</li>
+					<li>
+						<a href="#">Перово</a>
+					</li>
+					<li>
+						<a href="#">Петровско-Разумовская</a>
+					</li>
+					<li>
+						<a href="#">Печатники</a>
+					</li>
+					<li>
+						<a href="#">Пионерская</a>
+					</li>
+					<li>
+						<a href="#">Планерная</a>
+					</li>
+					<li>
+						<a href="#">Площадь Ильича</a>
+					</li>
+					<li>
+						<a href="#">Площадь Революции</a>
+					</li>
+					<li>
+						<a href="#">Полежаевская</a>
+					</li>
+					<li>
+						<a href="#">Полянка</a>
+					</li>
+					<li>
+						<a href="#">Пражская</a>
+					</li>
+					<li>
+						<a href="#">Преображенская площадь</a>
+					</li>
+					<li>
+						<a href="#">Пролетарская</a>
+					</li>
+					<li>
+						<a href="#">Проспект Вернадского</a>
+					</li>
+					<li>
+						<a href="#">Проспект Мира</a>
+					</li>
+					<li>
+						<a href="#">Профсоюзная</a>
+					</li>
+					<li>
+						<a href="#">Пушкинская</a>
+					</li>
+					<li>
+						<a href="#">Пятницкое шоссе</a>
+					</li>
+					<li>
+						<a href="#">Речной вокзал</a>
+					</li>
+					<li>
+						<a href="#">Рижская</a>
+					</li>
+					<li>
+						<a href="#">Римская</a>
+					</li>
+					<li>
+						<a href="#">Рязанский проспект</a>
+					</li>
+					<li>
+						<a href="#">Савеловская</a>
+					</li>
+					<li>
+						<a href="#">Свиблово</a>
+					</li>
+					<li>
+						<a href="#">Севастопольская</a>
+					</li>
+					<li>
+						<a href="#">Семеновская</a>
+					</li>
+					<li>
+						<a href="#">Серпуховская</a>
+					</li>
+					<li>
+						<a href="#">Славянский бульвар</a>
+					</li>
+					<li>
+						<a href="#">Смоленская</a>
+					</li>
+					<li>
+						<a href="#">Сокол</a>
+					</li>
+					<li>
+						<a href="#">Сокольники</a>
+					</li>
+					<li>
+						<a href="#">Спартак</a>
+					</li>
+					<li>
+						<a href="#">Спортивная</a>
+					</li>
+					<li>
+						<a href="#">Сретенский бульвар</a>
+					</li>
+					<li>
+						<a href="#">Строгино</a>
+					</li>
+					<li>
+						<a href="#">Студенческая</a>
+					</li>
+					<li>
+						<a href="#">Сухаревская</a>
+					</li>
+					<li>
+						<a href="#">Сходненская</a>
+					</li>
+					<li>
+						<a href="#">Таганская</a>
+					</li>
+					<li>
+						<a href="#">Тверская</a>
+					</li>
+					<li>
+						<a href="#">Театральная</a>
+					</li>
+					<li>
+						<a href="#">Текстильщики</a>
+					</li>
+					<li>
+						<a href="#">Теплый Стан</a>
+					</li>
+					<li>
+						<a href="#">Тимирязевская</a>
+					</li>
+					<li>
+						<a href="#">Третьяковская</a>
+					</li>
+					<li>
+						<a href="#">Трубная</a>
+					</li>
+					<li>
+						<a href="#">Тульская</a>
+					</li>
+					<li>
+						<a href="#">Тургеневская</a>
+					</li>
+					<li>
+						<a href="#">Тушинская</a>
+					</li>
+					<li>
+						<a href="#">Улица 1905 года</a>
+					</li>
+					<li>
+						<a href="#">Улица Академика Янгеля</a>
+					</li>
+					<li>
+						<a href="#">Улица Горчакова</a>
+					</li>
+					<li>
+						<a href="#">Улица Подбельского</a>
+					</li>
+					<li>
+						<a href="#">Улица Скобелевская</a>
+					</li>
+					<li>
+						<a href="#">Улица Старокачаловская</a>
+					</li>
+					<li>
+						<a href="#">Университет</a>
+					</li>
+					<li>
+						<a href="#">Филевский парк</a>
+					</li>
+					<li>
+						<a href="#">Фили</a>
+					</li>
+					<li>
+						<a href="#">Фрунзенская</a>
+					</li>
+					<li>
+						<a href="#">Царицыно</a>
+					</li>
+					<li>
+						<a href="#">Цветной бульвар</a>
+					</li>
+					<li>
+						<a href="#">Черкизовская</a>
+					</li>
+					<li>
+						<a href="#">Чертановская</a>
+					</li>
+					<li>
+						<a href="#">Чеховская</a>
+					</li>
+					<li>
+						<a href="#">Чистые пруды</a>
+					</li>
+					<li>
+						<a href="#">Чкаловская</a>
+					</li>
+					<li>
+						<a href="#">Шаболовская</a>
+					</li>
+					<li>
+						<a href="#">Шипиловская</a>
+					</li>
+					<li>
+						<a href="#">Шоссе Энтузиастов</a>
+					</li>
+					<li>
+						<a href="#">Щелковская</a>
+					</li>
+					<li>
+						<a href="#">Щукинская</a>
+					</li>
+					<li>
+						<a href="#">Электрозаводская</a>
+					</li>
+					<li>
+						<a href="#">Юго-Западная</a>
+					</li>
+					<li>
+						<a href="#">Южная</a>
+					</li>
+					<li>
+						<a href="#">Ясенево</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- FOOTER-->
+		<footer class="m_footer">
+			<div class="wrapper">
+				<div class="logo">
+					<a class="db-link" href="#"></a>
+				</div>
+				<div class="center">
+					<nav>
+						<ul>
+							<li>
+								<a href="#">Индивидуалки</a>
+							</li>
+							<li>
+								<a href="#">Массажистики</a>
+							</li>
+							<li>
+								<a href="#">Салоны</a>
+							</li>
+							<li>
+								<a href="#">Статьи</a>
+							</li>
+							<li>
+								<a href="#">Подбор анкет</a>
+							</li>
+							<li>
+								<a href="#">Форум</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="latest-articles">
+						<div class="title">
+							<b>Последние статьи:</b>
+						</div>
+						<ul>
+							<li>
+								<a href="#">Считатется ли секс с путаной за измену?</a>
+							</li>
+							<li>
+								<a href="#">Фут трамплинг: Что это такое и с чем его едят?</a>
+							</li>
+							<li>
+								<a href="#">Какая фантазия для мужчин самая популярная?</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="copyright">
+					<span>© Все пaрава защищены.
+						<br>Копирование материалов запрещено</span>
+				</div>
+			</div>
+		</footer>
 		<!-- JS-->
 		<script src="2dosug98.com/js/jquery.min.js"></script>
 		<script src="2dosug98.com/js/plugins.js"></script>

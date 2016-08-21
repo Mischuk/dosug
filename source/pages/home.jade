@@ -3,5 +3,42 @@ extends ../modules/layout/layout.jade
 block title
   title Главная
 
-block content
-  h1 Hello, world!
+block header
+  header.m_header
+    .top
+      .wrapper
+        .logo: a(href="#")
+        .subway
+          a(href="#")
+            span.icon-subway
+            span.label
+              span.xs-visible Метро
+              span.xs-hidden Выбрать метро
+        .signin
+          a(href="#popup-signin").call-popup
+            span.s-icon-signin
+            span.label
+              span.xs-visible Кабинет
+              span.xs-hidden Вход в кабинет
+
+        .lang
+          a(href="#").current RU
+          a(href="#") ENG
+    .bottom
+      .wrapper
+        nav.menu
+          a(href="#").mobile-menu-trigger: span
+          ul
+            li: a(href="#") ИНДИВИДУАЛКИ
+            li: a(href="#") МАССАЖИСТКИ
+            li: a(href="#") ИНТИМ-КАРТА
+            li: a(href="#") ПОДБОР АНКЕТ
+            li: a(href="#") ФОРУМ
+    .filters
+      .wrapper
+        a.mobile-filters-trigger: span.icon-search
+        .m_filters
+          form form
+          .advanced-search
+            a(href="#") Расширенный поиск
+  include ../modules/subway-list/m_subway-list

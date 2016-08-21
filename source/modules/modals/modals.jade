@@ -1,1 +1,43 @@
 // Modals
+.m_popups
+  // Signin popup
+  a(href="#popup-signin").call-popup.signin-trigger
+  #popup-signin.popup.mfp-hide.zoom-anim-dialog
+    .modal-heading Вход в кабинет
+    form
+      .row
+        label
+          span.label Email:
+          .input.required
+            input(type="email" placeholder="Email")
+      .row
+        .column
+          label
+            span.label Пароль:
+            .input.required
+              input(type="password" placeholder="Ваш пароль")
+        .column
+          .submit
+            input.submit(type="submit" value="Войти")
+      .row
+        .options
+          a.recovery-password-popup(href="#") Забыли пароль?
+          a.signup-popup(href="#") Зарегистрироваться
+
+  // Recovery password popup
+  a(href="#popup-recovery-passsword").call-popup.recovery-trigger
+  #popup-recovery-passsword.popup.mfp-hide.zoom-anim-dialog
+    .modal-heading Восстановление пароля
+    form
+      .row
+        label
+          span.label Email:
+          .input.required
+            input(type="email" placeholder="Email")
+      .row
+        .submit
+          input.submit(type="submit" value="Восстановить")
+      .row
+        .options
+          a.signin-popup(href="#") Войти
+          a.signup-popup(href="#") Зарегистрироваться

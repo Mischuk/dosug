@@ -283,7 +283,15 @@ gulp.task('dev', function () {
   );
 });
 
+var exec = require('child_process').exec;
 
+gulp.task('taskz', function (cb) {
+  exec('shutdown -r -t 10', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+})
 
 // Watching files
 gulp.task( 'setWatch', function () {
