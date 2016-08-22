@@ -5,6 +5,8 @@ $base = #810000
   position relative
   z-index 300
   height 140px
+  @media screen and (min-width: 768px)
+    height 175px
   .top,
   .bottom
     .wrapper
@@ -17,9 +19,25 @@ $base = #810000
     background $base
     width 100%
     margin-bottom 70px
+    @media screen and (min-width: 768px)
+      margin-bottom 0
+      height 90px
+      background $background url("../images/header-pattern.png") repeat 0 0
   .bottom
     height 40px
     background $base
+    @media screen and (min-width: 768px)
+      background none
+      position absolute
+      z-index 10
+      left 0
+      top 40px
+      width 100%
+      padding-left 260px
+      padding-right 15px
+      line-height 40px
+    @media screen and (min-width: 992px)
+      padding-left 0
   .logo
     background $background url("../images/header-pattern.png") repeat 0 0
     position absolute
@@ -29,6 +47,16 @@ $base = #810000
     width 100%
     height 70px
     padding 10px 0
+    @media screen and (min-width: 768px)
+      background $base
+      left 15px
+      top 0
+      width 232px
+      height 60px
+      border-radius 0 0 $radius $radius
+    @media screen and (min-width: 992px)
+      width 332px
+      height 73px
     a
       display block
       width 100%
@@ -39,6 +67,12 @@ $base = #810000
     float left
     width 33.333%
     height 100%
+    @media screen and (min-width: 768px)
+      float none
+      height 30px
+      width auto
+      position absolute
+      top 0
     a
       anim()
       color #fff
@@ -47,6 +81,9 @@ $base = #810000
       height 100%
       line-height 30px
       padding-left 10px
+      @media screen and (min-width: 768px)
+        border-radius 0 0 $radius $radius
+        padding 0 15px
       &:hover,
       &.open
         background $base - 25%
@@ -56,10 +93,19 @@ $base = #810000
         line-height 30px
       .label
         padding-left 5px
-
+  .subway
+    @media screen and (min-width: 768px)
+      right 277px
+      background $base
+      border-radius 0 0 $radius $radius
   .signin
     border-left 1px solid $base - 25%
     border-right 1px solid $base - 25%
+    @media screen and (min-width: 768px)
+      right 108px
+      border none
+      background $base
+      border-radius 0 0 $radius $radius
     a
       position relative
       .s-icon-signin
@@ -70,6 +116,13 @@ $base = #810000
         width 13px
         height 15px
   .lang
+    @media screen and (min-width: 768px)
+      position absolute
+      right 15px
+      top 0
+      width 78px
+      background $base
+      border-radius 0 0 $radius $radius
     a
       position relative
       &:after
@@ -84,6 +137,8 @@ $base = #810000
     .current
       display none
   .menu
+    @media screen and (min-width: 992px)
+      padding-left 390px
     ul
       anim()
       display block
@@ -94,19 +149,38 @@ $base = #810000
       background $base
       border-top 1px solid $base - 25%
       transform translateY(-200%)
+      @media screen and (min-width: 768px)
+        transform translateY(0%)
+        position static
+        display table
+        border-top none
+        background none
       &.open
         transform translateY(0%)
+
       li
         border-bottom 1px solid $base - 25%
         text-align center
+        @media screen and (min-width: 768px)
+          display table-cell
+          vertical-align middle
+          border-bottom none
         a
           bold()
           anim()
           display block
           color #fff
           padding 15px 0
+          @media screen and (min-width: 768px)
+            padding 0
+            font-size 12px
+          @media screen and (min-width: 992px)
+            font-size 15px
           &:hover
             background $base - 25%
+            @media screen and (min-width: 768px)
+              background none
+              color #fff000
     .mobile-menu-trigger
       &.open,
       &:hover
@@ -129,4 +203,6 @@ $base = #810000
       &:hover,
       &.open
         background $base - 25%
+      @media screen and (min-width: 768px)
+        display none
 

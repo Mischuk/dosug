@@ -1,0 +1,81 @@
+$base = #810000
+
+.m_filters
+  anim()
+  position absolute
+  overflow hidden
+  left 0
+  top 0
+  width 100%
+  background $base
+  border-top 1px solid $base - 25%
+  padding 15px
+  transform translateY(-200%)
+  @media screen and (min-width: 768px)
+    transform translateY(0%)
+    position static
+    background none
+    border-top none
+    padding 30px 0
+  &.open
+    transform translateY(0%)
+  .column
+    margin-bottom 15px
+    @media screen and (min-width: 768px)
+      position relative
+      float left
+      width 33.333%
+      padding-left 4px
+      padding-right 4px
+    @media screen and (min-width: 992px)
+      width 18%
+      &:last-child
+        width 10%
+    .btn-lead
+      @media screen and (min-width: 768px)
+        background #990000
+        &:hover
+          background #810000
+  form
+    @media screen and (min-width: 768px)
+      width 100%
+    @media screen and (min-width: 992px)
+      padding-right 170px
+  .advanced-search
+    semibold()
+    text-align center
+    font-size 16px
+    @media screen and (min-width: 768px)
+      regular()
+      position absolute
+      right 4px
+      top 0px
+      font-size 14px
+      line-height 24px
+    @media screen and (min-width: 992px)
+      top 50%
+      margin-top -22px
+      right 0
+    &:before
+      @media screen and (min-width: 768px)
+        content '+'
+        color $base-color
+        font-weight 700
+        font-size 24px
+        line-height 24px
+        height 24px
+        display inline-block
+        vertical-align middle
+    a
+      color #fff
+      @media screen and (min-width: 768px)
+        display inline-block
+        line-height 24px
+        vertical-align middle
+        color #666
+        text-decoration underline
+      &:hover
+        text-decoration underline
+        @media screen and (min-width: 768px)
+          color $base-color
+

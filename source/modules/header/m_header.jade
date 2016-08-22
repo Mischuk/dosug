@@ -1,2 +1,82 @@
-// Header
-header.m_header header
+header.m_header
+  .top
+    .wrapper
+      .logo: a(href="#")
+      .subway
+        a(href="#")
+          span.icon-subway
+          span.label
+            span.xs-visible Метро
+            span.xs-hidden Выбрать метро
+      .signin
+        a(href="#popup-signin").call-popup
+          span.s-icon-signin
+          span.label
+            span.xs-visible Кабинет
+            span.xs-hidden Вход в кабинет
+      .lang
+        a(href="#").current RU
+        a(href="#") ENG
+  .bottom
+    .wrapper
+      nav.menu
+        a(href="#").mobile-menu-trigger: span
+        ul
+          li: a(href="#") ИНДИВИДУАЛКИ
+          li: a(href="#") МАССАЖИСТКИ
+          li: a(href="#") ИНТИМ-КАРТА
+          li: a(href="#") ПОДБОР АНКЕТ
+          li: a(href="#") ФОРУМ
+  .filters
+    .wrapper
+      a.mobile-filters-trigger: span.icon-search
+      .m_filters
+        form
+          .row
+            .column
+              select(name="filter-prices" style="width: 100%")
+                option(disabled="disabled" selected="selected") Цена
+                option(value="0-1500") 0 - 1 500
+                option(value="1500-2500") 1 500 - 2 500
+                option(value="2500-3500") 2 500 - 3 500
+                option(value="3500-5000") 3 500 - 5 000
+                option(value="5000-10000") 5 000 - 10 000
+                option(value="10000-100000") 10 000 - 100 000
+            .column
+              select(name="filter-age" style="width: 100%")
+                option(disabled="disabled" selected="selected") Возраст
+                option(value="18-20") 18 - 20
+                option(value="20-25") 20 - 25
+                option(value="25-30") 25 - 30
+                option(value="30-40") 30 - 40
+            .column
+              select(name="filter-growth" style="width: 100%")
+                option(disabled="disabled" selected="selected") Рост
+                option(value="140-150") 140 - 150
+                option(value="150-160") 150 - 160
+                option(value="160-170") 160 - 170
+                option(value="170-180") 170 - 180
+                option(value="180-190") 180 - 190
+                option(value="190-200+") 190 - 200+
+            .column
+              select(name="filter-weight" style="width: 100%")
+                option(disabled="disabled" selected="selected") Вес
+                option(value="40-45") 40 - 45
+                option(value="45-50") 45 - 50
+                option(value="50-60") 50 - 60
+                option(value="60-70") 60 - 70
+                option(value="70-80") 70 - 80
+                option(value="80-90+") 80 - 90+
+            .column
+              select(name="filter-breast" style="width: 100%")
+                option(disabled="disabled" selected="selected") Грудь
+                option(value="1-2") 1 - 2
+                option(value="2-3") 2 - 3
+                option(value="3-4") 3 - 4
+                option(value="4-5") 4 - 5
+                option(value="5+") 5+
+            .column
+              input.btn-lead(type="submit" value="Найти")
+        .advanced-search
+          a(href="#") Расширенный поиск
+include ../subway-list/m_subway-list

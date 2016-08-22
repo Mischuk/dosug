@@ -87,6 +87,17 @@ $(function() {
     };
     inputMask();
 
+    function select() {
+      var $select = $("select");
+      $select.on("change", function (e) {
+        alert($(this).select2("val"));
+      });
+      $select.select2({
+        minimumResultsForSearch: Infinity
+      });
+    };
+    select();
+
     $(window).scroll(function(){
 
       var $header = $('.m_header');
@@ -131,6 +142,18 @@ $(function() {
 
     
 
+    function closeFilters() {
+
+      $('.background-layout').removeClass('open');
+
+      $('.mobile-filters-trigger').removeClass('open');
+
+      $('.m_filters').removeClass('open');
+
+    };
+
+    
+
     // Menu
 
     function mobileMenu() {
@@ -148,6 +171,8 @@ $(function() {
         } else {
 
           closeSubway();
+
+          closeFilters()
 
           $(this).addClass('open');
 
@@ -183,6 +208,8 @@ $(function() {
 
           closeMenu();
 
+          closeFilters()
+
           $(this).addClass('open');
 
           $('.m_subway-list').addClass('open');
@@ -196,6 +223,50 @@ $(function() {
     };
 
     mobileSubway();
+
+    
+
+    // Filters
+
+    function mobileFilters() {
+
+      $('.mobile-filters-trigger').on('click', function(){
+
+        if ( $(this).hasClass('open') ) {
+
+          $(this).removeClass('open');
+
+          $('.m_filters').removeClass('open');
+
+          $('.background-layout').removeClass('open');
+
+        } else {
+
+          closeSubway();
+
+          closeMenu();
+
+          $(this).addClass('open');
+
+          $('.m_filters').addClass('open');
+
+          $('.background-layout').addClass('open');
+
+        }
+
+      });
+
+    };
+
+    mobileFilters();
+
+    
+
+    $('.m_subway-list .close').on('click', function(){
+
+      closeSubway()
+
+    });
 
     
 
@@ -213,11 +284,15 @@ $(function() {
 
           closeMenu();
 
+          closeFilters();
+
       });
 
     };
 
     bgLayout();
+
+    
 
     
 
@@ -280,4 +355,18 @@ $(function() {
     };
 
     popups();
+
+    
+
+    function subwaySort() {
+
+      $('.m_subway-list li').each(function(){
+
+        $(this).find('a b').parents('li').prev().css('display', 'block');
+
+      });
+
+    };
+
+    subwaySort();
 });

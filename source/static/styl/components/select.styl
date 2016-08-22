@@ -1,0 +1,32 @@
+.select2-container
+  @media screen and (max-width: 767px)
+    width 100%
+  .select2-dropdown,
+  .select2-selection
+    border-color $border-input
+  .select2-selection
+    border-radius 0
+    .select2-selection__arrow
+      width 24px
+      height 24px
+      right 2px
+      top 2px
+      background #ececec
+      &:after
+        content ''
+        background url('../images/sprite.png') no-repeat -150px 0
+        width 10px
+        height 9px
+        position absolute
+        left 50%
+        top 50%
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+      b
+        display none
+@media screen and (max-width: 767px)
+  .select2-container--open
+    left 0 !important
+    .select2-dropdown
+      margin-left 15px
+      margin-right 15px

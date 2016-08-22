@@ -11,7 +11,8 @@
   margin-top -(@height/2)
   border 2px solid transparent
   cursor pointer
-  @media screen and (min-width: 850px)
+  background #810000
+  @media screen and (min-width: 768px)
     display none
   &:after,
   &:before,
@@ -39,3 +40,17 @@
       transform: rotate(135deg) translate(-6px, 6px)
     &:before
       transform: rotate(-135deg) translate(-4px, -4px)
+
+.btn-lead
+  anim()
+  background $base-color
+  border none
+  border-radius $radius
+  height 30px
+  line-height 30px
+  color #fff
+  width 100%
+  &:hover
+    background $base-color - 15%
+  &:active
+    box-shadow inset 0 0 20px rgba(0,0,0,.25)

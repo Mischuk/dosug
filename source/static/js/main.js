@@ -87,5 +87,16 @@ $(function() {
     };
     inputMask();
 
+    function select() {
+      var $select = $("select");
+      $select.on("change", function (e) {
+        alert($(this).select2("val"));
+      });
+      $select.select2({
+        minimumResultsForSearch: Infinity
+      });
+    };
+    select();
+
     //=include modules.js
 });
