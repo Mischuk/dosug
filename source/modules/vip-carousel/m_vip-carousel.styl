@@ -1,0 +1,58 @@
+.m_vip-carousel
+  margin-bottom 30px
+  margin-top 15px
+  border-top 2px solid #eae5ea
+  border-bottom 2px solid #eae5ea
+  background #fff
+  text-align center
+  @media screen and (min-width: 768px)
+    background none
+    border none
+  .vip-carousel
+    @media screen and (min-width: 768px)
+      border 2px solid #eae5ea
+      border-radius $radius
+      background #fff
+    .item
+      padding 15px 7.5px
+      @media screen and (min-width: 768px)
+        padding 15px
+    .desc
+      margin-top 5px
+      a
+        color #000
+        &:hover
+          text-decoration underline
+        b
+          word-wrap break-word
+          &:after
+            content ','
+
+    .image
+      height 115px
+      a
+        position relative
+        display block
+        width 100%
+        height 100%
+        &:after
+          content ''
+          width 47px
+          height 47px
+          position absolute
+          left 0
+          top 0
+          background url("../images/vip.png") no-repeat 0 0
+        &:before
+          anim()
+          content ''
+          position absolute
+          left 0
+          top 0
+          width 100%
+          height 100%
+          background rgba(129, 0, 0, .2)
+          opacity 0
+        &:hover
+          &:before
+            opacity 1

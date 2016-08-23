@@ -7,6 +7,10 @@ $base = #810000
   background $base
   border-top 1px solid $base - 25%
   transform translateY(-200%)
+  position absolute
+  left 0
+  top 140px
+  width 100%
   @media screen and (min-width: 768px)
     position fixed
     left 0%
@@ -32,8 +36,10 @@ $base = #810000
     bottom 0
     box-shadow inset 0 -40px 20px -20px rgb(97, 0, 0)
   .close
+    display none
     @media screen and (min-width: 768px)
       anim()
+      display block
       width 50px
       height 50px
       line-height 50px

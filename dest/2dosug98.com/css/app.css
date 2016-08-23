@@ -365,7 +365,7 @@ body {
   line-height: 1.2;
   color: #000;
   background: #fff;
-  margin-bottom: 205px;
+  margin-bottom: 235px;
   background: url("../images/background.png") repeat 0 0;
 }
 footer {
@@ -583,7 +583,7 @@ a:hover {
     position: static;
     background: none;
     border-top: none;
-    padding: 30px 0;
+    padding: 30px 0 0 0;
   }
 }
 .m_filters.open {
@@ -648,7 +648,7 @@ a:hover {
 @media screen and (min-width: 992px) {
   .m_filters .advanced-search {
     top: 50%;
-    margin-top: -22px;
+    margin-top: -9px;
     right: 0;
   }
 }
@@ -815,6 +815,11 @@ a:hover {
   height: 140px;
 }
 @media screen and (min-width: 768px) {
+  .m_header {
+    height: 210px;
+  }
+}
+@media screen and (min-width: 992px) {
   .m_header {
     height: 175px;
   }
@@ -1258,6 +1263,10 @@ a:hover {
   -ms-transform: translateY(-200%);
   -o-transform: translateY(-200%);
   transform: translateY(-200%);
+  position: absolute;
+  left: 0;
+  top: 140px;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .m_subway-list {
@@ -1295,11 +1304,15 @@ a:hover {
   -webkit-box-shadow: inset 0 -40px 20px -20px #610000;
   box-shadow: inset 0 -40px 20px -20px #610000;
 }
+.m_subway-list .close {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .m_subway-list .close {
     -webkit-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
     -o-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
     transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+    display: block;
     width: 50px;
     height: 50px;
     line-height: 50px;
@@ -1394,6 +1407,84 @@ a:hover {
 }
 .m_subway-list ul li a b {
   color: #fff000;
+}
+.m_vip-carousel {
+  margin-bottom: 30px;
+  margin-top: 15px;
+  border-top: 2px solid #eae5ea;
+  border-bottom: 2px solid #eae5ea;
+  background: #fff;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .m_vip-carousel {
+    background: none;
+    border: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .m_vip-carousel .vip-carousel {
+    border: 2px solid #eae5ea;
+    border-radius: 5px;
+    background: #fff;
+  }
+}
+.m_vip-carousel .vip-carousel .item {
+  padding: 15px 7.5px;
+}
+@media screen and (min-width: 768px) {
+  .m_vip-carousel .vip-carousel .item {
+    padding: 15px;
+  }
+}
+.m_vip-carousel .vip-carousel .desc {
+  margin-top: 5px;
+}
+.m_vip-carousel .vip-carousel .desc a {
+  color: #000;
+}
+.m_vip-carousel .vip-carousel .desc a:hover {
+  text-decoration: underline;
+}
+.m_vip-carousel .vip-carousel .desc a b {
+  word-wrap: break-word;
+}
+.m_vip-carousel .vip-carousel .desc a b:after {
+  content: ',';
+}
+.m_vip-carousel .vip-carousel .image {
+  height: 115px;
+}
+.m_vip-carousel .vip-carousel .image a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.m_vip-carousel .vip-carousel .image a:after {
+  content: '';
+  width: 47px;
+  height: 47px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("../images/vip.png") no-repeat 0 0;
+}
+.m_vip-carousel .vip-carousel .image a:before {
+  -webkit-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+  -o-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+  transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(129,0,0,0.2);
+  opacity: 0;
+}
+.m_vip-carousel .vip-carousel .image a:hover:before {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=app.css.map */
