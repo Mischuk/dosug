@@ -54,3 +54,48 @@
     background $base-color - 15%
   &:active
     box-shadow inset 0 0 20px rgba(0,0,0,.25)
+
+.mobile-sidebar-trigger
+  anim()
+  position fixed
+  left 0
+  top 50%
+  width 50px
+  height 50px
+  margin-top -(@height/2)
+  background $base-color
+  cursor pointer
+  border-radius 0 $radius $radius 0
+  z-index 400
+  @media screen and (min-width: 1200px)
+    display none
+  &:after
+    anim()
+    content ''
+    width 20px
+    height 4px
+    background #fff
+    position absolute
+    left 50%
+    top 50%
+    margin-left -9px
+    margin-top -9px
+    transform rotate(45deg)
+  &:before
+    anim()
+    content ''
+    width 20px
+    height 4px
+    background #fff
+    position absolute
+    left 50%
+    top 50%
+    margin-left -10px
+    margin-top 4px
+    transform rotate(-45deg)
+  &.open
+    transform translateX(230px)
+    &:before
+      transform rotate(-45deg) translate(2px, -5px)
+    &:after
+      transform rotate(45deg) translate(3px, 8px)

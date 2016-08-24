@@ -1,17 +1,8 @@
-$(window).scroll(function(){
-  var $header = $('.m_header');
-
-  if ($(this).scrollTop() > 90) {
-      $header.addClass('fixed');
-  } else {
-      $header.removeClass('fixed');
-  }
-});
-
 // Close
 function closeSubway() {
   $('.background-layout').removeClass('open');
   $('.subway a, .m_subway-list').removeClass('open');
+  $('body').css('overflow', 'auto');
 };
 
 function closeMenu() {
@@ -26,6 +17,12 @@ function closeFilters() {
   $('.m_filters').removeClass('open');
 };
 
+function closeSidebar() {
+  $('.mobile-sidebar-trigger').removeClass('open');
+  $('.m_sidebar').removeClass('open');
+  $('.background-layout').removeClass('open zindex-large');
+}
+
 // Menu
 function mobileMenu() {
   $('.mobile-menu-trigger').on('click', function(){
@@ -33,12 +30,14 @@ function mobileMenu() {
       $(this).removeClass('open');
       $(this).next().removeClass('open');
       $('.background-layout').removeClass('open');
+      $('.mobile-sidebar-trigger').show();
     } else {
       closeSubway();
       closeFilters()
       $(this).addClass('open');
       $(this).next().addClass('open');
       $('.background-layout').addClass('open');
+      $('.mobile-sidebar-trigger').hide();
     }
   });
 };
@@ -51,12 +50,16 @@ function mobileSubway() {
       $(this).removeClass('open');
       $('.m_subway-list').removeClass('open');
       $('.background-layout').removeClass('open');
+      $('body').css('overflow', 'auto');
+      $('.mobile-sidebar-trigger').show();
     } else {
       closeMenu();
       closeFilters()
       $(this).addClass('open');
       $('.m_subway-list').addClass('open');
       $('.background-layout').addClass('open');
+      $('body').css('overflow', 'hidden');
+      $('.mobile-sidebar-trigger').hide();
     }
   });
 };
@@ -69,12 +72,14 @@ function mobileFilters() {
       $(this).removeClass('open');
       $('.m_filters').removeClass('open');
       $('.background-layout').removeClass('open');
+      $('.mobile-sidebar-trigger').show();
     } else {
       closeSubway();
       closeMenu();
       $(this).addClass('open');
       $('.m_filters').addClass('open');
       $('.background-layout').addClass('open');
+      $('.mobile-sidebar-trigger').hide();
     }
   });
 };
@@ -92,6 +97,8 @@ function bgLayout() {
       closeSubway();
       closeMenu();
       closeFilters();
+      closeSidebar();
+      $('.mobile-sidebar-trigger').show();
   });
 };
 bgLayout();

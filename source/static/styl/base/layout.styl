@@ -11,25 +11,43 @@ html
 body
   font-family 'Open Sans', sans-serif
   font-size 14px
-  line-height 1.2
+  line-height 1.4
   color #000
   background #fff
   margin-bottom $footer + 30
   background url("../images/background.png") repeat 0 0
+  html.no-touchevents &
+    background-attachment fixed
 footer
   height $footer
+.container,
 .wrapper
   clearfix()
-  position relative
   max-width $wrapper
   height 100%
   padding-left 15px
   padding-right 15px
   margin-left auto
   margin-right auto
-
+.wrapper
+  position relative
+.container
+  aside
+    @media screen and (min-width: 1200px)
+      float left
+      width 20%
+      padding-right 15px
+    & + main
+      @media screen and (min-width: 1200px)
+        float left
+        width 80%
+  .full-section
+    @media screen and (min-width: 1200px)
+      float left
+      width 100%
+      padding 70px 0
 .background-layout
-  anim()
+  transition opacity 0.3s cubic-bezier(.33,.66,.66,1)
   left 0
   top 0
   width 100%
@@ -41,3 +59,5 @@ footer
   &.open
     position fixed
     opacity 1
+  &.zindex-large
+    z-index 350

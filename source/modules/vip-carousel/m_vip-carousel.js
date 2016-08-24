@@ -1,5 +1,9 @@
 function vipCarousel() {
-  $('.vip-carousel').slick({
+  var $carousel = $('.vip-carousel');
+  $carousel.on('init', function(event, slick, direction){
+    $(this).css('opacity', '1');
+  });
+  $carousel.slick({
     slidesToShow: 8,
     arrows: false,
     dots: false,

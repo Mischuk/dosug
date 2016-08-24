@@ -1,0 +1,18 @@
+.m_vip-carousel
+  .wrapper
+    -
+      var vip = [
+        { image: "http://placekitten.com/125/115", name: 'Лиза', age: '24' },
+        { image: "http://placekitten.com/107/115", name: 'Лика', age: '19' },
+        { image: "http://placekitten.com/108/116", name: 'Селена', age: '24' },
+        { image: "http://placekitten.com/106/113", name: 'Маринка', age: '21' },
+        { image: "http://placekitten.com/105/114", name: 'Маргариточка', age: '25' },
+        { image: "http://placekitten.com/107/118", name: 'Любава', age: '24' },
+        { image: "http://placekitten.com/108/117", name: 'Ульяна', age: '27' },
+        { image: "http://placekitten.com/104/118", name: 'Дениз', age: '22' }
+      ]
+    .vip-carousel
+      -each post in vip
+        .item
+          .image: a(href="#" style="background-image: url('#{post.image}')").url-image.db-link
+          .desc: a(href="#") <b>#{post.name}</b> #{post.age}

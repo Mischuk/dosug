@@ -1,0 +1,25 @@
+.m_paginations
+  text-align center
+  cursor default
+  margin-bottom 30px
+  ul, li, a
+    display inline-block
+    vertical-align middle
+  a, span
+    font-size 16px
+    font-weight 700
+    color #000
+    min-width 26px
+    height 26px
+    line-height 26px
+    border-radius $radius
+  a:hover
+    color $base-color
+  li.current a
+    background $base-color
+    color #fff
+  li:last-child a
+    text-decoration underline
+    margin-left 10px
+    &:hover
+      color $base-color
