@@ -8,7 +8,8 @@ clearfix()
 
 anim()
   transition all 0.3s cubic-bezier(.33,.66,.66,1)
-
+trs(e)
+  transition e 0.3s cubic-bezier(.33,.66,.66,1)
 smooth()
   -webkit-transform translate3d(0, 0, 0)
   -webkit-backface-visibility hidden
@@ -100,5 +101,6 @@ _triangle-borders($sides, $size, $color)
       border-{$side} $size solid $color
     else if $style == transparent
       border-{$side} $size solid transparent
+
 
 

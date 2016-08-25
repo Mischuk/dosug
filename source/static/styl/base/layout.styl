@@ -1,10 +1,6 @@
 /*!=========================
       Base grid styles
 ==========================*/
-$footer = 205px
-$wrapper = 1210px
-
-
 html
   position relative
   min-height 100%
@@ -33,21 +29,21 @@ footer
   position relative
 .container
   aside
-    @media screen and (min-width: 1200px)
+    @media LG
       float left
       width 20%
       padding-right 15px
     & + main
-      @media screen and (min-width: 1200px)
+      @media LG
         float left
         width 80%
   .full-section
-    @media screen and (min-width: 1200px)
+    @media LG
       float left
       width 100%
       padding 70px 0
 .background-layout
-  transition opacity 0.3s cubic-bezier(.33,.66,.66,1)
+  trs(opacity)
   left 0
   top 0
   width 100%

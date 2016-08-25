@@ -1,13 +1,12 @@
 $background = #990000
-$base = #810000
 
 .m_header
   position relative
   z-index 300
   height 140px
-  @media screen and (min-width: 768px)
+  @media SM
     height 210px
-  @media screen and (min-width: 992px)
+  @media MD
     height 175px
   .top,
   .bottom
@@ -17,19 +16,18 @@ $base = #810000
   .top
     position relative
     z-index 10
-    height 30px
-    background $base
     width 100%
+    height 30px
     margin-bottom 70px
-    @media screen and (min-width: 768px)
-      margin-bottom 0
+    background $base-color-second
+    @media SM
       height 90px
+      margin-bottom 0
       background $background url("../images/header-pattern.png") repeat 0 0
   .bottom
     height 40px
-    background $base
-    @media screen and (min-width: 768px)
-      background none
+    background $base-color-second
+    @media SM
       position absolute
       z-index 10
       left 0
@@ -38,10 +36,10 @@ $base = #810000
       padding-left 260px
       padding-right 15px
       line-height 40px
-    @media screen and (min-width: 992px)
+      background none
+    @media MD
       padding-left 0
   .logo
-    background $background url("../images/header-pattern.png") repeat 0 0
     position absolute
     z-index 10
     left 0
@@ -49,46 +47,50 @@ $base = #810000
     width 100%
     height 70px
     padding 10px 0
-    @media screen and (min-width: 768px)
-      background $base
+    background $background url("../images/header-pattern.png") repeat 0 0
+    @media SM
       left 15px
       top 0
       width 232px
       height 60px
       border-radius 0 0 $radius $radius
-    @media screen and (min-width: 992px)
+      background $base-color-second
+    @media MD
       width 332px
       height 73px
+      padding 0
     a
       display block
       width 100%
       height 100%
       background url("../images/header-logo.png") no-repeat 50%
       background-size contain
+      @media MD
+        background-size initial
   .signin, .subway, .lang
     float left
     width 33.333%
     height 100%
-    @media screen and (min-width: 768px)
-      float none
-      height 30px
-      width auto
+    @media SM
       position absolute
+      float none
       top 0
+      width auto
+      height 30px
     a
       anim()
-      color #fff
       display block
       width 100%
       height 100%
-      line-height 30px
       padding-left 10px
-      @media screen and (min-width: 768px)
+      line-height 30px
+      color #fff
+      @media SM
         border-radius 0 0 $radius $radius
         padding 0 15px
       &:hover,
       &.open
-        background $base - 25%
+        background $base-color-second - 25%
       > span
         display inline-block
         vertical-align top
@@ -96,50 +98,66 @@ $base = #810000
       .label
         padding-left 5px
   .subway
-    @media screen and (min-width: 768px)
+    @media SM
       right 277px
-      background $base
+      background $base-color-second
       border-radius 0 0 $radius $radius
+      .icon-subway
+        display none
+      a
+        padding-right 40px
+        &:after
+          content ''
+          position absolute
+          right 14px
+          top 10px
+          width 10px
+          height 9px
+          background: url('../images/sprite.png') no-repeat 0 0;
+    @media MD
+      right 400px
   .signin
-    border-left 1px solid $base - 25%
-    border-right 1px solid $base - 25%
-    @media screen and (min-width: 768px)
+    border-left 1px solid $base-color-second - 25%
+    border-right 1px solid $base-color-second - 25%
+    @media SM
       right 108px
       border none
-      background $base
       border-radius 0 0 $radius $radius
+      background $base-color-second
+    @media MD
+      right 200px
     a
       position relative
       .s-icon-signin
-        margin-top -3px
         display inline-block
         vertical-align middle
-        background url('../images/sprite.png') no-repeat -50px 0
         width 13px
         height 15px
+        margin-top -3px
+        background url('../images/sprite.png') no-repeat -50px 0
   .lang
-    @media screen and (min-width: 768px)
+    @media SM
       position absolute
       right 15px
       top 0
       width 78px
-      background $base
       border-radius 0 0 $radius $radius
+      background $base-color-second
     a
       position relative
       &:after
         content ''
-        background url('../images/sprite.png') no-repeat -100px 0
-        width 9px
-        height 10px
         position absolute
         right 10px
         top 50%
+        width 9px
+        height 10px
         margin-top -(@height/2)
+        background url('../images/sprite.png') no-repeat -100px 0
     .current
       display none
   .menu
-    @media screen and (min-width: 992px)
+    @media MD
       padding-left 390px
     ul
       anim()
@@ -148,22 +166,22 @@ $base = #810000
       left 0
       top 40px
       width 100%
-      background $base
-      border-top 1px solid $base - 25%
+      border-top 1px solid $base-color-second - 25%
       transform translateY(-200%)
-      @media screen and (min-width: 768px)
-        transform translateY(0%)
+      background $base-color-second
+      @media SM
         position static
         display table
         border-top none
+        transform translateY(0%)
         background none
       &.open
         transform translateY(0%)
 
       li
-        border-bottom 1px solid $base - 25%
+        border-bottom 1px solid $base-color-second - 25%
         text-align center
-        @media screen and (min-width: 768px)
+        @media SM
           display table-cell
           vertical-align middle
           border-bottom none
@@ -171,40 +189,40 @@ $base = #810000
           bold()
           anim()
           display block
-          color #fff
           padding 15px 0
-          @media screen and (min-width: 768px)
+          color #fff
+          @media SM
             padding 0
             font-size 12px
-          @media screen and (min-width: 992px)
+          @media MD
             font-size 15px
           &:hover
-            background $base - 25%
-            @media screen and (min-width: 768px)
+            background $base-color-second - 25%
+            @media SM
               background none
               color #fff000
     .mobile-menu-trigger
       &.open,
       &:hover
-        background $base - 25%
+        background $base-color-second - 25%
   .filters
     .mobile-filters-trigger
       anim()
       position absolute
-      cursor pointer
       z-index 10
       right 0
-      width 50%
       bottom 0
-      line-height 40px
-      background $base
-      color #fff
-      border-left 1px solid $base - 25%
-      text-align center
+      width 50%
+      border-left 1px solid $base-color-second - 25%
       font-size 20px
+      line-height 40px
+      text-align center
+      background $base-color-second
+      color #fff
+      cursor pointer
       &:hover,
       &.open
-        background $base - 25%
-      @media screen and (min-width: 768px)
+        background $base-color-second - 25%
+      @media SM
         display none
 

@@ -395,20 +395,20 @@ footer {
 .wrapper {
   position: relative;
 }
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .container aside {
     float: left;
     width: 20%;
     padding-right: 15px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .container aside + main {
     float: left;
     width: 80%;
   }
 }
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .container .full-section {
     float: left;
     width: 100%;
@@ -475,8 +475,7 @@ h2 {
 }
 .section-title.small {
   font-size: 22px;
-  padding-bottom: 20px;
-  padding-top: 10px;
+  padding: 10px 0;
 }
 a {
   color: #069;
@@ -553,16 +552,17 @@ a:hover {
   -webkit-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
   -o-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
   transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
-  background: #c00;
+  background: #900;
   border: none;
   border-radius: 5px;
   height: 30px;
   line-height: 30px;
   color: #fff;
   width: 100%;
+  font-weight: bold;
 }
 .btn-lead:hover {
-  background: #ad0000;
+  background: #820000;
 }
 .btn-lead:active {
   -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.25);
@@ -583,7 +583,7 @@ a:hover {
   border-radius: 0 5px 5px 0;
   z-index: 400;
 }
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .mobile-sidebar-trigger {
     display: none;
   }
@@ -715,7 +715,7 @@ a:hover {
   -o-transform: translateY(-200%);
   transform: translateY(-200%);
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_filters {
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
@@ -736,7 +736,7 @@ a:hover {
 .m_filters .column {
   margin-bottom: 15px;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_filters .column {
     position: relative;
     float: left;
@@ -745,7 +745,7 @@ a:hover {
     padding-right: 4px;
   }
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_filters .column {
     width: 18%;
   }
@@ -753,20 +753,20 @@ a:hover {
     width: 10%;
   }
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_filters .column .btn-lead {
     background: #900;
   }
   .m_filters .column .btn-lead:hover {
-    background: #810000;
+    background: #820000;
   }
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_filters form {
     width: 100%;
   }
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_filters form {
     padding-right: 170px;
   }
@@ -776,43 +776,43 @@ a:hover {
   text-align: center;
   font-size: 16px;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_filters .advanced-search {
     font-weight: 400;
     position: absolute;
     right: 4px;
-    top: 0px;
+    top: 0;
     font-size: 14px;
     line-height: 24px;
   }
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_filters .advanced-search {
     top: 50%;
     margin-top: -9px;
     right: 0;
   }
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_filters .advanced-search:before {
-    content: '+';
-    color: #c00;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 24px;
-    height: 24px;
+    content: '+';
     display: inline-block;
     vertical-align: middle;
+    height: 24px;
+    font-size: 24px;
+    line-height: 24px;
+    color: #c00;
   }
 }
 .m_filters .advanced-search a {
   color: #fff;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_filters .advanced-search a {
     display: inline-block;
-    line-height: 24px;
     vertical-align: middle;
+    line-height: 24px;
     color: #666;
     text-decoration: underline;
   }
@@ -820,7 +820,7 @@ a:hover {
 .m_filters .advanced-search a:hover {
   text-decoration: underline;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_filters .advanced-search a:hover {
     color: #c00;
   }
@@ -832,7 +832,7 @@ a:hover {
   background: #161616;
   color: #ccc;
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_footer {
     padding-top: 25px;
   }
@@ -849,14 +849,14 @@ a:hover {
   padding-left: 15px;
 }
 .m_footer ul li:after {
-  content: '';
   width: 5px;
   height: 5px;
-  border-radius: 50%;
-  background: #f33;
+  content: '';
   position: absolute;
   left: 0;
   top: 8px;
+  border-radius: 50%;
+  background: #f33;
 }
 .m_footer ul li a {
   display: inline-block;
@@ -871,7 +871,7 @@ a:hover {
   background: #1d1d1d;
   border-radius: 0 0 5px 5px;
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_footer .logo {
     position: absolute;
     left: 15px;
@@ -888,10 +888,10 @@ a:hover {
 }
 .m_footer .copyright {
   display: block;
-  text-align: center;
   margin-top: 35px;
+  text-align: center;
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_footer .copyright {
     position: absolute;
     right: 15px;
@@ -900,7 +900,7 @@ a:hover {
     text-align: right;
   }
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_footer .center {
     padding: 0 300px;
   }
@@ -911,35 +911,30 @@ a:hover {
     clear: both;
   }
 }
-@media screen and (min-width: 1250px) {
-  .m_footer .center {
-    padding: 0 279px;
-  }
-}
 .m_footer .center nav,
 .m_footer .center .latest-articles {
   display: none;
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_footer .center nav,
   .m_footer .center .latest-articles {
     display: block;
   }
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_footer .center nav {
     float: left;
     width: 30%;
   }
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_footer .center .latest-articles {
     float: left;
     width: 70%;
     padding-left: 10%;
   }
 }
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .m_footer .center .latest-articles {
     padding-left: 2%;
   }
@@ -949,9 +944,6 @@ a:hover {
 }
 .m_footer .center .latest-articles a {
   text-decoration: underline;
-}
-.m_girls {
-  margin-bottom: 30px;
 }
 .m_girls:before,
 .m_girls:after {
@@ -965,8 +957,8 @@ a:hover {
   transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
   margin-bottom: 30px;
   background: #fff;
-  -webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,0.15);
-  box-shadow: 0 0 5px 1px rgba(0,0,0,0.15);
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
 }
 .m_girls .item:before,
 .m_girls .item:after {
@@ -983,7 +975,7 @@ a:hover {
     margin-left: 4%;
   }
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_girls .item {
     height: 376px;
     width: 49%;
@@ -993,19 +985,29 @@ a:hover {
     margin-left: 2%;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .m_girls .item {
+    height: 376px;
+    width: 48.5%;
+    margin-bottom: 3%;
+  }
+  .m_girls .item:nth-child(even) {
+    margin-left: 3%;
+  }
+}
 .m_girls .item:last-child {
   margin-bottom: 0;
 }
 .m_girls .item:hover {
-  -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,0.25);
-  box-shadow: 0 0 5px 2px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
 }
 .m_girls .item .image,
 .m_girls .item .info {
   float: left;
   width: 100%;
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_girls .item .image,
   .m_girls .item .info {
     width: 50%;
@@ -1015,12 +1017,17 @@ a:hover {
   float: right;
   height: 300px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 360px) {
+  .m_girls .item .image {
+    height: 400px;
+  }
+}
+@media only screen and (min-width: 992px) {
   .m_girls .item .image {
     height: 100%;
   }
 }
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .m_girls .item .image {
     width: 55%;
   }
@@ -1044,7 +1051,12 @@ a:hover {
 .m_girls .item .image a:hover:after {
   opacity: 1;
 }
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
+  .m_girls .item .info {
+    padding-top: 5px;
+  }
+}
+@media only screen and (min-width: 1200px) {
   .m_girls .item .info {
     width: 45%;
   }
@@ -1060,10 +1072,10 @@ a:hover {
   color: #000;
 }
 .m_girls .item .info .name {
+  font-weight: 600;
   font-style: italic;
   font-size: 22px;
   line-height: 1;
-  font-weight: 600;
 }
 .m_girls .item .info .parameters {
   font-size: 12px;
@@ -1072,8 +1084,8 @@ a:hover {
   content: " / ";
 }
 .m_girls .item .info .parameters b {
-  font-size: 14px;
   font-weight: 600;
+  font-size: 14px;
 }
 .m_girls .item .info .verified,
 .m_girls .item .info .unverified {
@@ -1180,12 +1192,12 @@ a:hover {
   z-index: 300;
   height: 140px;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_header {
     height: 210px;
   }
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_header {
     height: 175px;
   }
@@ -1198,15 +1210,15 @@ a:hover {
 .m_header .top {
   position: relative;
   z-index: 10;
-  height: 30px;
-  background: #810000;
   width: 100%;
+  height: 30px;
   margin-bottom: 70px;
+  background: #810000;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_header .top {
-    margin-bottom: 0;
     height: 90px;
+    margin-bottom: 0;
     background: #900 url("../images/header-pattern.png") repeat 0 0;
   }
 }
@@ -1214,9 +1226,8 @@ a:hover {
   height: 40px;
   background: #810000;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_header .bottom {
-    background: none;
     position: absolute;
     z-index: 10;
     left: 0;
@@ -1225,15 +1236,15 @@ a:hover {
     padding-left: 260px;
     padding-right: 15px;
     line-height: 40px;
+    background: none;
   }
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_header .bottom {
     padding-left: 0;
   }
 }
 .m_header .logo {
-  background: #900 url("../images/header-pattern.png") repeat 0 0;
   position: absolute;
   z-index: 10;
   left: 0;
@@ -1241,21 +1252,23 @@ a:hover {
   width: 100%;
   height: 70px;
   padding: 10px 0;
+  background: #900 url("../images/header-pattern.png") repeat 0 0;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_header .logo {
-    background: #810000;
     left: 15px;
     top: 0;
     width: 232px;
     height: 60px;
     border-radius: 0 0 5px 5px;
+    background: #810000;
   }
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_header .logo {
     width: 332px;
     height: 73px;
+    padding: 0;
   }
 }
 .m_header .logo a {
@@ -1266,6 +1279,12 @@ a:hover {
   -webkit-background-size: contain;
   background-size: contain;
 }
+@media only screen and (min-width: 992px) {
+  .m_header .logo a {
+    -webkit-background-size: initial initial;
+    background-size: initial;
+  }
+}
 .m_header .signin,
 .m_header .subway,
 .m_header .lang {
@@ -1273,15 +1292,15 @@ a:hover {
   width: 33.333%;
   height: 100%;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_header .signin,
   .m_header .subway,
   .m_header .lang {
-    float: none;
-    height: 30px;
-    width: auto;
     position: absolute;
+    float: none;
     top: 0;
+    width: auto;
+    height: 30px;
   }
 }
 .m_header .signin a,
@@ -1290,14 +1309,14 @@ a:hover {
   -webkit-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
   -o-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
   transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
-  color: #fff;
   display: block;
   width: 100%;
   height: 100%;
-  line-height: 30px;
   padding-left: 10px;
+  line-height: 30px;
+  color: #fff;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_header .signin a,
   .m_header .subway a,
   .m_header .lang a {
@@ -1325,44 +1344,69 @@ a:hover {
 .m_header .lang a .label {
   padding-left: 5px;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_header .subway {
     right: 277px;
     background: #810000;
     border-radius: 0 0 5px 5px;
+  }
+  .m_header .subway .icon-subway {
+    display: none;
+  }
+  .m_header .subway a {
+    padding-right: 40px;
+  }
+  .m_header .subway a:after {
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: 10px;
+    width: 10px;
+    height: 9px;
+    background: url("../images/sprite.png") no-repeat 0 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .m_header .subway {
+    right: 400px;
   }
 }
 .m_header .signin {
   border-left: 1px solid #610000;
   border-right: 1px solid #610000;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_header .signin {
     right: 108px;
     border: none;
-    background: #810000;
     border-radius: 0 0 5px 5px;
+    background: #810000;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .m_header .signin {
+    right: 200px;
   }
 }
 .m_header .signin a {
   position: relative;
 }
 .m_header .signin a .s-icon-signin {
-  margin-top: -3px;
   display: inline-block;
   vertical-align: middle;
-  background: url("../images/sprite.png") no-repeat -50px 0;
   width: 13px;
   height: 15px;
+  margin-top: -3px;
+  background: url("../images/sprite.png") no-repeat -50px 0;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_header .lang {
     position: absolute;
     right: 15px;
     top: 0;
     width: 78px;
-    background: #810000;
     border-radius: 0 0 5px 5px;
+    background: #810000;
   }
 }
 .m_header .lang a {
@@ -1370,18 +1414,18 @@ a:hover {
 }
 .m_header .lang a:after {
   content: '';
-  background: url("../images/sprite.png") no-repeat -100px 0;
-  width: 9px;
-  height: 10px;
   position: absolute;
   right: 10px;
   top: 50%;
+  width: 9px;
+  height: 10px;
   margin-top: -5px;
+  background: url("../images/sprite.png") no-repeat -100px 0;
 }
 .m_header .lang .current {
   display: none;
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_header .menu {
     padding-left: 390px;
   }
@@ -1395,22 +1439,22 @@ a:hover {
   left: 0;
   top: 40px;
   width: 100%;
-  background: #810000;
   border-top: 1px solid #610000;
   -webkit-transform: translateY(-200%);
   -ms-transform: translateY(-200%);
   -o-transform: translateY(-200%);
   transform: translateY(-200%);
+  background: #810000;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_header .menu ul {
+    position: static;
+    display: table;
+    border-top: none;
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
     -o-transform: translateY(0%);
     transform: translateY(0%);
-    position: static;
-    display: table;
-    border-top: none;
     background: none;
   }
 }
@@ -1424,7 +1468,7 @@ a:hover {
   border-bottom: 1px solid #610000;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_header .menu ul li {
     display: table-cell;
     vertical-align: middle;
@@ -1437,16 +1481,16 @@ a:hover {
   -o-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
   transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
   display: block;
-  color: #fff;
   padding: 15px 0;
+  color: #fff;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_header .menu ul li a {
     padding: 0;
     font-size: 12px;
   }
 }
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .m_header .menu ul li a {
     font-size: 15px;
   }
@@ -1454,7 +1498,7 @@ a:hover {
 .m_header .menu ul li a:hover {
   background: #610000;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_header .menu ul li a:hover {
     background: none;
     color: #fff000;
@@ -1469,23 +1513,23 @@ a:hover {
   -o-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
   transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
   position: absolute;
-  cursor: pointer;
   z-index: 10;
   right: 0;
-  width: 50%;
   bottom: 0;
+  width: 50%;
+  border-left: 1px solid #610000;
+  font-size: 20px;
   line-height: 40px;
+  text-align: center;
   background: #810000;
   color: #fff;
-  border-left: 1px solid #610000;
-  text-align: center;
-  font-size: 20px;
+  cursor: pointer;
 }
 .m_header .filters .mobile-filters-trigger:hover,
 .m_header .filters .mobile-filters-trigger.open {
   background: #610000;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_header .filters .mobile-filters-trigger {
     display: none;
   }
@@ -1493,7 +1537,13 @@ a:hover {
 .m_paginations {
   text-align: center;
   cursor: default;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+@media screen and (min-width: 568px) {
+  .m_paginations {
+    margin-top: 0;
+  }
 }
 .m_paginations ul,
 .m_paginations li,
@@ -1671,7 +1721,7 @@ a:hover {
   -o-transform: translateX(-110%);
   transform: translateX(-110%);
 }
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .m_sidebar {
     background: none;
     position: static;
@@ -1692,7 +1742,7 @@ a:hover {
 .m_sidebar .categories {
   padding: 0 15px;
 }
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .m_sidebar .categories {
     padding: 0;
   }
@@ -1755,7 +1805,7 @@ a:hover {
   top: 140px;
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_subway-list {
     position: fixed;
     left: 0%;
@@ -1794,7 +1844,7 @@ a:hover {
 .m_subway-list .close {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_subway-list .close {
     -webkit-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
     -o-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
@@ -1817,7 +1867,7 @@ a:hover {
     opacity: 1;
   }
 }
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .m_subway-list .close {
     right: 20%;
   }
@@ -1825,12 +1875,12 @@ a:hover {
 .m_subway-list .wrapper {
   padding: 0;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_subway-list .wrapper {
     padding-top: 65px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .m_subway-list .wrapper {
     width: 100%;
     max-width: none;
@@ -1844,7 +1894,7 @@ a:hover {
   height: 50px;
   line-height: 50px;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_subway-list .title {
     position: absolute;
     left: 0;
@@ -1854,7 +1904,7 @@ a:hover {
     background: #810000;
   }
 }
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .m_subway-list .title {
     padding: 0 20%;
   }
@@ -1864,19 +1914,19 @@ a:hover {
   overflow: auto;
   padding: 15px 0;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_subway-list ul {
     max-height: 100%;
     padding-top: 0;
   }
 }
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .m_subway-list ul {
     padding-left: 20%;
     padding-right: 20%;
   }
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_subway-list ul li {
     display: inline-block;
     vertical-align: top;
@@ -1902,20 +1952,25 @@ a:hover {
   border-bottom: 2px solid #eae5ea;
   background: #fff;
   text-align: center;
-  max-height: 200px;
+  max-height: 220px;
   overflow: hidden;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_vip-carousel {
     background: none;
     border: none;
     margin-bottom: 30px;
   }
 }
+@media only screen and (min-width: 992px) {
+  .m_vip-carousel {
+    margin-top: 0;
+  }
+}
 .m_vip-carousel .vip-carousel {
   opacity: 0;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_vip-carousel .vip-carousel {
     border: 2px solid #eae5ea;
     border-radius: 5px;
@@ -1925,9 +1980,9 @@ a:hover {
 .m_vip-carousel .vip-carousel .item {
   padding: 15px 7.5px;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .m_vip-carousel .vip-carousel .item {
-    padding: 15px;
+    padding: 20px 15px;
   }
 }
 .m_vip-carousel .vip-carousel .desc {

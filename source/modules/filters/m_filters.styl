@@ -1,5 +1,3 @@
-$base = #810000
-
 .m_filters
   anim()
   position absolute
@@ -7,11 +5,11 @@ $base = #810000
   left 0
   top 0
   width 100%
-  background $base
-  border-top 1px solid $base - 25%
+  background $base-color-second
+  border-top 1px solid $base-color-second - 25%
   padding 15px
   transform translateY(-200%)
-  @media screen and (min-width: 768px)
+  @media SM
     transform translateY(0%)
     position static
     background none
@@ -21,61 +19,61 @@ $base = #810000
     transform translateY(0%)
   .column
     margin-bottom 15px
-    @media screen and (min-width: 768px)
+    @media SM
       position relative
       float left
       width 33.333%
       padding-left 4px
       padding-right 4px
-    @media screen and (min-width: 992px)
+    @media MD
       width 18%
       &:last-child
         width 10%
     .btn-lead
-      @media screen and (min-width: 768px)
-        background #990000
+      @media SM
+        background $button
         &:hover
-          background #810000
+          background $button - 15%
   form
-    @media screen and (min-width: 768px)
+    @media SM
       width 100%
-    @media screen and (min-width: 992px)
+    @media MD
       padding-right 170px
   .advanced-search
     semibold()
     text-align center
     font-size 16px
-    @media screen and (min-width: 768px)
+    @media SM
       regular()
       position absolute
       right 4px
-      top 0px
+      top 0
       font-size 14px
       line-height 24px
-    @media screen and (min-width: 992px)
+    @media MD
       top 50%
       margin-top -9px
       right 0
     &:before
-      @media screen and (min-width: 768px)
+      @media SM
+        bold()
         content '+'
-        color $base-color
-        font-weight 700
+        display inline-block
+        vertical-align middle
+        height 24px
         font-size 24px
         line-height 24px
-        height 24px
-        display inline-block
-        vertical-align middle
+        color $base-color
     a
       color #fff
-      @media screen and (min-width: 768px)
+      @media SM
         display inline-block
-        line-height 24px
         vertical-align middle
+        line-height 24px
         color #666
         text-decoration underline
       &:hover
         text-decoration underline
-        @media screen and (min-width: 768px)
+        @media SM
           color $base-color
 

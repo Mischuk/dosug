@@ -11,7 +11,7 @@ $base = #810000
   left 0
   top 140px
   width 100%
-  @media screen and (min-width: 768px)
+  @media SM
     position fixed
     left 0%
     top 0
@@ -37,7 +37,7 @@ $base = #810000
     box-shadow inset 0 -40px 20px -20px rgb(97, 0, 0)
   .close
     display none
-    @media screen and (min-width: 768px)
+    @media SM
       anim()
       display block
       width 50px
@@ -54,13 +54,13 @@ $base = #810000
       opacity .8
       &:hover
         opacity 1
-    @media screen and (min-width: 1200px)
+    @media LG
       right 20%
   .wrapper
     padding 0
-    @media screen and (min-width: 768px)
+    @media SM
       padding-top 65px
-    @media screen and (min-width: 1200px)
+    @media LG
       width 100%
       max-width none
   .title
@@ -70,27 +70,27 @@ $base = #810000
     padding 0 15px
     height 50px
     line-height 50px
-    @media screen and (min-width: 768px)
+    @media SM
       position absolute
       left 0
       top 0
       width 100%
       height 50px
       background $base
-    @media screen and (min-width: 1200px)
+    @media LG
       padding 0 20%
   ul
     max-height 240px
     overflow auto
     padding 15px 0
-    @media screen and (min-width: 768px)
+    @media SM
       max-height 100%
       padding-top 0
-    @media screen and (min-width: 1200px)
+    @media LG
       padding-left 20%
       padding-right 20%
     li
-      @media screen and (min-width: 768px)
+      @media SM
         display inline-block
         vertical-align top
         width 32%
