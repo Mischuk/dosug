@@ -1,0 +1,21 @@
+.m_breadcrumbs
+  margin-bottom 15px
+  cursor default
+  @media SM
+    margin-top -15px
+  li
+    display inline-block
+    vertical-align middle
+    &:after
+      content " - "
+    &:last-child
+      a
+        bold()
+        text-decoration none
+      &:after
+        display none
+    a
+      color $base-text-dark
+      text-decoration underline
+      &:hover
+        color $link

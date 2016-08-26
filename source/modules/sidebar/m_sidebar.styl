@@ -2,7 +2,7 @@
   anim()
   height 100%
   background: url("../images/background.png") repeat 0 0;
-  position absolute
+  position fixed
   left 0
   top 0
   z-index 400
@@ -10,6 +10,9 @@
   overflow auto
   box-shadow 0 0 15px 5px rgba(0,0,0,.5)
   transform translateX(-110%)
+  padding 0 15px 15px 15px
+  @media LG
+    padding 0
   @media LG
     background none
     position static
@@ -17,35 +20,64 @@
     box-shadow none
   &.open
     transform translateX(0%)
+  ul
+    margin-bottom 20px
+    &:last-child
+      margin-bottom 0
+  li
+    position relative
+    padding-left 20px
+    &:after
+      anim()
+      content ''
+      width 3px
+      height 11px
+      background #cc0000
+      position absolute
+      left 5px
+      top 8px
+    &:hover
+      &:after
+        transform translateX(-10px) rotate(130deg)
+        opacity 0
+    .label
+      color $base-text
+  a
+    anim()
+    display inline-block
+    vertical-align middle
+    color $base-text-dark
+    padding 4px 0
+    &:hover
+      color $base-color
+  .status
+    display inline-block
+    vertical-align middle
+    background $base-color
+    font-style italic
+    color #fff
+    padding 2px 4px
   .categories
-    padding 0 15px
-    @media LG
-      padding 0
-    ul
-      margin-bottom 20px
-      &:last-child
-        margin-bottom 0
     li
-      position relative
       padding-left 25px
       &:after
-        anim()
-        content ''
-        width 3px
-        height 11px
-        background #cc0000
-        position absolute
-        left 10px
         top 7px
-      &:hover
-        &:after
-          transform translateX(-10px) rotate(130deg)
-          opacity 0
-    a
-      anim()
-      display inline-block
-      vertical-align middle
-      color #666666
-      padding 4px 0
-      &:hover
-        color $base-color
+        left 10px
+  .user-navs
+    padding-top 10px
+    > div
+      margin-bottom 40px
+      &:last-child
+        margin-bottom 0
+        margin-top -15px
+    .section-title
+      padding 5px 0
+      cursor default
+  .cash
+    ul
+      margin-bottom 10px
+      li
+        padding-top 4px
+        padding-bottom 4px
+    .btn-lead
+      width 185px

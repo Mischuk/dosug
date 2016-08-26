@@ -18,6 +18,8 @@ var jeet = require('jeet');
 var stylus = require('stylus');
 var jadeInheritance = require('gulp-jade-inheritance');
 var sourcemaps = require('gulp-sourcemaps');
+var gutil = require('gulp-util');
+var ftp = require('gulp-ftp');
 
 var project = '2dosug98.com';
 
@@ -283,15 +285,17 @@ gulp.task('dev', function () {
   );
 });
 
-var exec = require('child_process').exec;
+gulp.task('ftp', function () {
+  return gulp.src('dest/**/*')
+    .pipe(ftp({
+        host: 'mischuk.ftp.ukraine.com.ua',
+        user: 'mischuk_ftp',
+        pass: 'WzKFPGWl',
+        remotePath: '/dosug'
+    }))
+    .pipe(gutil.noop());
+});
 
-gulp.task('taskz', function (cb) {
-  exec('shutdown -r -t 10', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
-})
 
 // Watching files
 gulp.task( 'setWatch', function () {

@@ -1,0 +1,70 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Добавить баннер
+
+block breadcrumbs
+  -
+    var breadcrumbs = [
+      {link: 'Все проститутки Москвы'},
+      {link: 'Добавить баннер'}
+    ]
+  include ../modules/breadcrumbs/m_breadcrumbs
+
+block content
+  // Sidebar
+  aside.m_sidebar
+    .user-navs
+      .account
+        .section-title.small Личный кабинет
+        .cash
+          ul
+            li
+              span.label Ваш баланс:
+              span.sum 1234.00
+              span.currency руб
+            li
+              span.label Расход в час:
+              span.sum 34
+              span.currency руб
+          .cash-in
+            a(href="#").btn-lead Пополнить баланс
+      .admins
+        .section-title.small Админ панель
+        ul
+          li: a(href="#") Платные услуги
+          li: a(href="#") Черные список
+          li: a(href="#") Мои данные
+      .messages
+        .section-title.small Переписка
+        ul
+          li: a(href="#") Новые сообщения <span class="status">15</span>
+          li: a(href="#") Черные список
+          li: a(href="#") Мои данные
+      .girls
+        .section-title.small Индивидуалки
+        ul
+          li: a(href="#") Идут показы <span class="status">2</span> из <span class="status">25</span>
+          li: a(href="#") Добавить анкету
+          li: a(href="#") Ваши анкеты
+      .partnership
+        .section-title.small Баннеры
+        ul
+          li: a(href="#") Идут показы <span class="status">12</span> из <span class="status">16</span>
+          li: a(href="#") Добавить баннеры
+          li: a(href="#") Ваши баннеры
+      .signout
+        a(href="#").btn-lead.signout Выход
+
+  // Partnership banners
+  aside.m_partnership
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+1")
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+2")
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+3")
+  // Content
+  main
+    h1 Добавить баннер
+
+
+
+

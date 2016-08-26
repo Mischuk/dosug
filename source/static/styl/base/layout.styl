@@ -8,7 +8,7 @@ body
   font-family 'Open Sans', sans-serif
   font-size 14px
   line-height 1.4
-  color #000
+  color $base-text-dark
   background #fff
   margin-bottom $footer + 30
   background url("../images/background.png") repeat 0 0
@@ -28,7 +28,18 @@ footer
 .wrapper
   position relative
 .container
-  aside
+  aside.m_partnership
+    display none
+    @media LG
+      display block
+      float right
+      width 20%
+      padding-left 15px
+    & + main
+      @media LG
+        float left
+        width 80%
+  aside.m_sidebar
     @media LG
       float left
       width 20%
@@ -37,6 +48,23 @@ footer
       @media LG
         float left
         width 80%
+  aside.m_sidebar
+    @media LG
+      float left
+      width 20%
+      padding-right 15px
+    & + aside.m_partnership
+      display none
+      @media LG
+        display block
+        float right
+        width 20%
+        padding-left 15px
+      & + main
+        @media LG
+          float left
+          width 60%
+
   .full-section
     @media LG
       float left
