@@ -1,0 +1,17 @@
+table
+  width 100%
+  text-align left
+  th
+    font-style italic
+    padding 10px 0
+    @media screen and (min-width: 568px)
+      padding 10px 15px
+    & + th
+      text-align center
+  td
+    border-top 1px solid $border
+    padding 5px 0px
+    @media screen and (min-width: 568px)
+      padding 5px 15px
+    & + td
+      text-align center

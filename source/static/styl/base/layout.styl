@@ -85,3 +85,21 @@ footer
     opacity 1
   &.zindex-large
     z-index 350
+
+.grid-row
+  clearfix()
+  margin-bottom 30px
+  &:last-child
+    margin-bottom 0
+.grid-column
+  margin-bottom 30px
+  &:last-child
+    margin-bottom 0
+  @media SM
+    float left
+    width 48.5%
+    margin-bottom 3%
+    &:nth-child(even)
+      margin-left 3%
+    &:last-child
+      margin-bottom 0

@@ -63,35 +63,36 @@ block content
       ]
     .m_girls
       -each post in girls
-        .item
-          .image
-            a(href="#" style="background-image: url('#{post.image}')").url-image.block
-          .info
-            .name #{post.name}
-            .parameters
-              span <b>#{post.age}</b> лет
-              span <b>#{post.growth}</b> см
-              span <b>#{post.weight}</b> кг
-              span <b>#{post.breast}</b>
-            .verified
-            .tel: a(href="#") #{post.tel}
-            .subway: a(href="#") #{post.subway}
-            .prices
-              table
-                tr
-                  th(colspan="2") Тариф:
-                tr
-                  td 1 час
-                  td <span>#{post.hour}</span> руб
-                tr
-                  td 2 часа
-                  td <span>#{post.hours}</span> руб
-                tr
-                  td Ночь
-                  td <span>#{post.night}</span> руб
-            .comments
-              .label Отзывы: <a href="#">4</a>
-            .details: a(href="#") Подробнее
+        .grid-column
+          .item
+            .image
+              a(href="#" style="background-image: url('#{post.image}')").url-image.block
+            .info
+              .name #{post.name}
+              .parameters
+                span <b>#{post.age}</b> лет
+                span <b>#{post.growth}</b> см
+                span <b>#{post.weight}</b> кг
+                span <b>#{post.breast}</b>
+              .verified
+              .tel: a(href="#") #{post.tel}
+              .subway: a(href="#") #{post.subway}
+              .prices
+                table
+                  tr
+                    th(colspan="2") Тариф:
+                  tr
+                    td 1 час
+                    td <span class="sum">#{post.hour}</span> <span class="currency">руб</span>
+                  tr
+                    td 2 часа
+                    td <span class="sum">#{post.hours}</span> <span class="currency">руб</span>
+                  tr
+                    td Ночь
+                    td <span class="sum">#{post.night}</span> <span class="currency">руб</span>
+              .comments
+                .label Отзывы: <a href="#">4</a>
+              .details: a(href="#") Подробнее
     include ../modules/paginations/m_paginations
   // Full width article after main section
   section.full-section

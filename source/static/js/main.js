@@ -87,6 +87,7 @@ $(function() {
     };
     inputMask();
 
+    // Custom select for all pages
     function select() {
       var $select = $("select");
       $select.on("change", function (e) {
@@ -97,6 +98,106 @@ $(function() {
       });
     };
     select();
+
+    // Input[type="file"]
+    function fileInput() {
+      $('input[type="file"]').on('change', function(){
+        if ( !$(this).val() == '' ) {
+          var filename = $(this).val().split('\\').pop();
+          $(this).next().find('.filename').text(filename);
+          $(this).next().show();
+          $(this).prev().hide();
+          $(this).prev().prev().hide();
+          $(this).hide();
+        }
+      });
+
+      $('.clear-file-input').on('click', function(){
+        var fileinput = $(this).parent().prev();
+        fileinput.val('');
+        $(this).parent().hide();
+        fileinput.show();
+        fileinput.prev().show();
+        fileinput.prev().prev().show();
+        return false;
+      });
+    };
+    fileInput();
+
+
+    // Add banner price calculation
+    function partnershipPriceCalc() {
+      var $select = $('.select-date select');
+      $select.on('change', function(e){
+        var i = 0;
+        $select.each(function(){
+          var val = $(this).select2("val");
+          if ( val == '' ) {
+          } else {
+            i++;
+          }
+        });
+        if ( i == 3) {
+          var day = $('[name="date-day"]').select2("val");
+          var month = $('[name="date-month"]').select2("val");
+          var year = $('[name="date-year"]').select2("val");
+          $('#date-end').val(month+'/'+day+'/'+year);
+          daydiffs = daydiff(parseDate($('#date-start').val()), parseDate($('#date-end').val()));
+          if ( daydiffs*bannerPrice > -1 ) {
+            $('#total-sum').text(daydiffs*bannerPrice).number( true, 0, '.', ' ' );
+          } else {
+            $('#total-sum').text('0');
+          }
+        }
+      });
+
+
+      function currentDate() {
+        var d = new Date();
+        var month = d.getMonth()+1;
+        var day = d.getDate();
+        var output =  ((''+month).length<2 ? '0' : '') + month + '/' + ((''+day).length<2 ? '0' : '') + day + '/' + d.getFullYear() + '/';
+        $('#date-start').val(output);
+      };
+      currentDate();
+
+      function parseDate(str) {
+          var mdy = str.split('/');
+          return new Date(mdy[2], mdy[0]-1, mdy[1]);
+      }
+
+      function daydiff(first, second) {
+          return Math.round((second-first)/(1000*60*60*24));
+      }
+
+      function selectPrice() {
+        bannerPrice = $('select[name="select-price"]').select2("val");
+
+        $('.select-place select').on('change', function(e){
+          bannerPrice = $('select[name="select-price"]').select2("val");
+
+          var i = 0;
+          $('.select-date select').each(function(){
+            var val = $(this).select2("val");
+            if ( val == '' ) {
+            } else {
+              i++;
+            }
+          });
+          if ( i == 3) {
+            if ( daydiffs*bannerPrice > -1 ) {
+              $('#total-sum').text(daydiffs*bannerPrice).number( true, 0, '.', ' ' );
+            } else {
+              $('#total-sum').text('0');
+            }
+          }
+
+
+        });
+      };
+      selectPrice();
+    };
+    partnershipPriceCalc();
 
     //=include modules.js
 });

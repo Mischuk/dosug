@@ -14,48 +14,7 @@ block breadcrumbs
 block content
   // Sidebar
   aside.m_sidebar
-    .user-navs
-      .account
-        .section-title.small Личный кабинет
-        .cash
-          ul
-            li
-              span.label Ваш баланс:
-              span.sum 1234.00
-              span.currency руб
-            li
-              span.label Расход в час:
-              span.sum 34
-              span.currency руб
-          .cash-in
-            a(href="#").btn-lead Пополнить баланс
-      .admins
-        .section-title.small Админ панель
-        ul
-          li: a(href="#") Платные услуги
-          li: a(href="#") Черные список
-          li: a(href="#") Мои данные
-      .messages
-        .section-title.small Переписка
-        ul
-          li: a(href="#") Новые сообщения <span class="status">15</span>
-          li: a(href="#") Черные список
-          li: a(href="#") Мои данные
-      .girls
-        .section-title.small Индивидуалки
-        ul
-          li: a(href="#") Идут показы <span class="status">2</span> из <span class="status">25</span>
-          li: a(href="#") Добавить анкету
-          li: a(href="#") Ваши анкеты
-      .partnership
-        .section-title.small Баннеры
-        ul
-          li: a(href="#") Идут показы <span class="status">12</span> из <span class="status">16</span>
-          li: a(href="#") Добавить баннеры
-          li: a(href="#") Ваши баннеры
-      .signout
-        a(href="#").btn-lead.signout Выход
-
+    include ../modules/sidebar/user-navs.jade
   // Partnership banners
   aside.m_partnership
     a(href="#"): img(src="http://placehold.it/221x300?text=Ads+1")
@@ -64,7 +23,119 @@ block content
   // Content
   main
     h1 Добавить баннер
-
-
-
+    .grid-row
+      .partnership-rates.l-bg
+        .section-title.bold.border Тарифы на замещение баннеров
+        table
+          tr
+            th Размер баннера
+            th Стоимость/сутки
+          tr
+            td Баннер <span class="highlight">200x300</span>, правый блок в ротации
+            td <span class="sum">290</span> <span class="currency">руб</span>
+          tr
+            td Баннер <span class="highlight">960x90</span>, подвал сайта
+            td <span class="sum">75</span> <span class="currency">руб</span>
+    .grid-row
+      .partnership-add.l-bg
+        .section-title.bold.border Добавить баннер
+        form.default-form
+          .row
+            label
+              span.label Название баннера:
+              div.input
+                input(type="text" placeholder="")
+          .row
+            label
+              span.label Место размещения:
+              div.input.select-place
+                select(name="select-price")
+                  option(value="290") Правая колонка 200х300
+                  option(value="75") Подвал 960х90
+          .row
+            label
+              span.label Баннер:
+              div.input.file
+                span.file-input-icon
+                span.file-input-label Прикрепить файл
+                input(type="file" placeholder="" accept=".gif, .jpg")
+                .attached.hide
+                  span.filename
+                  span.clear-file-input ×
+          .row
+            label
+              span.label Ссылка:
+              div.input
+                input(type="text" placeholder="")
+          .row
+            label
+              span.label Дата отключения:
+              div.input.select-date
+                .column
+                  select(name="date-day")
+                    option(value="" selected="selected") День
+                    option(value="01") 1
+                    option(value="02") 2
+                    option(value="03") 3
+                    option(value="04") 4
+                    option(value="05") 5
+                    option(value="06") 6
+                    option(value="07") 7
+                    option(value="08") 8
+                    option(value="09") 9
+                    option(value="10") 10
+                    option(value="11") 11
+                    option(value="12") 12
+                    option(value="13") 13
+                    option(value="14") 14
+                    option(value="15") 15
+                    option(value="16") 16
+                    option(value="17") 17
+                    option(value="18") 18
+                    option(value="19") 19
+                    option(value="20") 20
+                    option(value="21") 21
+                    option(value="22") 22
+                    option(value="23") 23
+                    option(value="24") 24
+                    option(value="25") 25
+                    option(value="26") 26
+                    option(value="27") 27
+                    option(value="28") 28
+                    option(value="29") 29
+                    option(value="30") 30
+                    option(value="31") 31
+                .column
+                  select(name="date-month")
+                    option(value="" selected="selected") Месяц
+                    option(value="01") Январь
+                    option(value="02") Февраль
+                    option(value="03") Март
+                    option(value="04") Апрель
+                    option(value="05") Май
+                    option(value="06") Июнь
+                    option(value="07") Июль
+                    option(value="08") Август
+                    option(value="09") Сентрябрь
+                    option(value="10") Октябрь
+                    option(value="11") Ноябрь
+                    option(value="12") Декабрь
+                .column
+                  select(name="date-year")
+                    option(value="" selected="selected") Год
+                    option(value="2016") 2016
+                    option(value="2017") 2017
+                    option(value="2018") 2018
+                    option(value="2019") 2019
+                    option(value="2020") 2020
+                .column
+                  .total-sum
+                    .paragraph.large <b>Бюджет</b> <span id="total-sum" class="sum">0</span> <span class="currency">руб</span>
+                  input(id="date-start" type="hidden" value="")
+                  input(id="date-end" type="hidden" value="")
+          .row
+            label
+              span.label
+              div.input.submit
+                button.btn-lead.submit.medium(type="submit") Добавить баннер
 

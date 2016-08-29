@@ -1,0 +1,84 @@
+form.default-form
+  margin-top 15px
+  overflow hidden
+  max-width 500px
+  &.full-width
+    max-width 100%
+  .select2-container
+    width 100% !important
+  .row
+    margin-bottom 15px
+  .submit
+    max-width 185px
+  label
+    display block
+    @media screen and (min-width: 568px)
+      clearfix()
+  .label
+    display block
+    padding-bottom 5px
+    @media screen and (min-width: 568px)
+      float left
+      width 175px
+  .input
+    @media screen and (min-width: 568px)
+      float left
+      width 310px
+    input
+      anim()
+      width 100%
+      border 1px solid $border-input
+      height 30px
+      line-height 28px
+      padding-left 20px
+      padding-right 20px
+      &:focus
+        border-color $border-input - 25%
+    &.file
+      position relative
+      input
+        visibility hidden
+        height 0
+        width 0
+        border none
+        line-height 0
+        padding-left 0
+        padding-right 0
+      .file-input-icon
+        display inline-block
+        vertical-align middle
+        background url('../images/sprite.png') no-repeat 0 -100px
+        width 14px
+        height 14px
+      .file-input-label
+        color $link
+        text-decoration underline
+        cursor pointer
+        &:hover
+          color #000
+      .filename,
+      .clear-file-input
+        bold()
+        display inline-block
+        vertical-align middle
+        line-height 20px
+      .clear-file-input
+        position relative
+        top 1px
+        width 20px
+        height 20px
+        color $base-color
+        font-size 20px
+        text-align center
+        cursor pointer
+    &.select-date
+      clearfix()
+      .column
+        float left
+        width 32%
+        margin-left 1.6%
+        &:first-child
+          margin-left 0
+        &:last-child
+          width 100%
+          margin-left 0

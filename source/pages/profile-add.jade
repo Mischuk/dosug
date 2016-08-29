@@ -1,0 +1,48 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Добавить анкету
+
+block breadcrumbs
+  -
+    var breadcrumbs = [
+      {link: 'Все проститутки Москвы'},
+      {link: 'Добавить анкету'}
+    ]
+  include ../modules/breadcrumbs/m_breadcrumbs
+
+block content
+  // Sidebar
+  aside.m_sidebar
+    include ../modules/sidebar/user-navs.jade
+  // Content
+  main
+    h1 Добавить анкету
+    .m_profile-add
+      form.default-form.full-width
+        .grid-row
+          .grid-column
+            .data.l-bg
+              .section-title.bold.border Ваши данные
+          .grid-column
+            .rates.l-bg
+              .section-title.bold.border Тарифы
+            .about.l-bg
+              .section-title.bold.border О себе
+        .grid-row
+          .location.l-bg
+            .section-title.bold.border Ваше местоположение
+        .grid-row
+          .services.l-bg
+            .section-title.bold.border Услуги
+        .grid-row
+          .grid-column
+            .images.l-bg
+              .section-title.bold.border Добавьте фото
+          .grid-column
+            .video.l-bg
+              .section-title.bold.border Добавьте видео
+            .additional.l-bg
+              .section-title.bold.border Дополнительная информация
+        .grid-row
+          button(type="submit").btn-lead.medium.center.submit Сохранить
