@@ -228,19 +228,19 @@ select {
 }
 ::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #404040;
+  color: #999;
 }
 ::-moz-placeholder,
 textarea::-moz-placeholder {
-  color: #404040;
+  color: #999;
 }
 :-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: #404040;
+  color: #999;
 }
 input:-moz-placeholder,
 textareainput:-moz-placeholder {
-  color: #404040;
+  color: #999;
 }
 input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
@@ -324,6 +324,22 @@ textarea:focus:-ms-input-placeholder {
 @media screen and (min-width: 768px) {
   .xs-visible {
     display: none;
+  }
+}
+.md-hidden {
+  display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .md-hidden {
+    display: none;
+  }
+}
+.md-visible {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .md-visible {
+    display: inline-block;
   }
 }
 .hide {
@@ -501,7 +517,7 @@ footer {
   .grid-column {
     float: left;
     width: 48.5%;
-    margin-bottom: 3%;
+    margin-bottom: 0;
   }
   .grid-column:nth-child(even) {
     margin-left: 3%;
@@ -589,6 +605,19 @@ a:hover {
 .paragraph.large {
   font-size: 18px;
 }
+.remark {
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+}
+.remark.mt-n {
+  margin-top: -15px;
+}
+@media screen and (min-width: 568px) {
+  .remark.mt-n {
+    margin-top: 0;
+  }
+}
 /* Components styles */
 .l-bg {
   padding: 10px;
@@ -602,7 +631,7 @@ a:hover {
 }
 @media screen and (min-width: 568px) {
   .l-bg {
-    padding: 10px 20px;
+    padding: 10px 20px 15px 20px;
   }
 }
 .mobile-menu-trigger {
@@ -785,6 +814,72 @@ a:hover {
   -o-transform: rotate(45deg) translate(3px, 8px);
   transform: rotate(45deg) translate(3px, 8px);
 }
+.checkbox {
+  position: relative;
+}
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+.checkbox input[type="checkbox"] + .check-icon {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  left: 0;
+  top: 6.5px;
+  border: 1px solid #dbdbdb;
+  cursor: pointer;
+}
+.checkbox input[type="checkbox"] + .check-icon:after {
+  -webkit-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+  -o-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+  transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+  content: '';
+  background: url("../images/sprite.png") no-repeat -50px -100px;
+  width: 15px;
+  height: 11px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -7.5px;
+  margin-top: -5.5px;
+  opacity: 0;
+  -webkit-transform: scale(0.1) rotate(135deg);
+  -ms-transform: scale(0.1) rotate(135deg);
+  -o-transform: scale(0.1) rotate(135deg);
+  transform: scale(0.1) rotate(135deg);
+}
+.checkbox input[type="checkbox"] + .check-icon {
+  cursor: pointer;
+}
+.checkbox input[type="checkbox"] + .check-icon + .check-label {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 30px;
+  color: #999;
+  font-size: 14px;
+  cursor: pointer;
+  padding-top: 4px;
+}
+.checkbox input[type="checkbox"]:checked + .check-icon:after {
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(0deg);
+  -ms-transform: scale(1) rotate(0deg);
+  -o-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+}
+.checkbox input[type="checkbox"]:checked + .check-icon + .check-label {
+  color: #333;
+}
 form.default-form {
   margin-top: 15px;
   overflow: hidden;
@@ -793,11 +888,117 @@ form.default-form {
 form.default-form.full-width {
   max-width: 100%;
 }
+form.default-form textarea {
+  -webkit-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+  -o-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+  transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+  border: 1px solid #dbdbdb;
+  width: 100%;
+  height: 125.2px;
+  max-height: 125.2px;
+  padding: 10px 15px;
+}
+form.default-form textarea:focus {
+  border-color: #a4a4a4;
+}
 form.default-form .select2-container {
   width: 100% !important;
 }
 form.default-form .row {
   margin-bottom: 15px;
+  margin-top: 15px;
+}
+form.default-form .row:last-child {
+  margin-bottom: 0;
+}
+form.default-form .row.columns-not-equal .column {
+  float: left;
+}
+form.default-form .row.columns-not-equal .column:first-child {
+  width: 48%;
+}
+@media screen and (min-width: 568px) {
+  form.default-form .row.columns-not-equal .column:first-child {
+    width: 65%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  form.default-form .row.columns-not-equal .column:first-child {
+    width: 56%;
+  }
+}
+form.default-form .row.columns-not-equal .column:first-child .label {
+  width: 72%;
+}
+@media only screen and (min-width: 992px) {
+  form.default-form .row.columns-not-equal .column:first-child .label {
+    width: 67%;
+  }
+}
+@media screen and (min-width: 568px) {
+  form.default-form .row.columns-not-equal .column:first-child .input {
+    width: 28%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  form.default-form .row.columns-not-equal .column:first-child .input {
+    width: 33%;
+  }
+}
+form.default-form .row.columns-not-equal .column:last-child {
+  width: 48%;
+  margin-left: 4%;
+}
+@media screen and (min-width: 568px) {
+  form.default-form .row.columns-not-equal .column:last-child {
+    width: 35%;
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  form.default-form .row.columns-not-equal .column:last-child {
+    width: 44%;
+  }
+}
+@media screen and (min-width: 568px) {
+  form.default-form .row.columns-not-equal .column:last-child .label {
+    text-align: right;
+    padding-right: 10px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  form.default-form .row.columns-not-equal .column:last-child .label {
+    width: 58%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  form.default-form .row.columns-not-equal .column:last-child .input {
+    width: 42%;
+  }
+}
+@media screen and (min-width: 240px) {
+  form.default-form .row.columns-equal .column {
+    float: left;
+    width: 48%;
+  }
+}
+@media screen and (min-width: 240px) {
+  form.default-form .row.columns-equal .column:last-child {
+    margin-left: 4%;
+  }
+}
+form.default-form .row.columns-equal .column .column-title {
+  font-weight: 600;
+  color: #666;
+}
+@media screen and (min-width: 568px) {
+  form.default-form .row.columns-equal .column .column-title {
+    padding-left: 35%;
+  }
 }
 form.default-form .submit {
   max-width: 185px;
@@ -820,14 +1021,39 @@ form.default-form .label {
 @media screen and (min-width: 568px) {
   form.default-form .label {
     float: left;
-    width: 175px;
+    line-height: 30px;
+    padding-bottom: 0;
+    width: 47%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  form.default-form .label {
+    width: 38%;
   }
 }
 @media screen and (min-width: 568px) {
   form.default-form .input {
     float: left;
-    width: 310px;
+    width: 53%;
   }
+}
+@media only screen and (min-width: 992px) {
+  form.default-form .input {
+    width: 62%;
+  }
+}
+form.default-form .input.currency-after {
+  position: relative;
+  padding-right: 40px;
+}
+form.default-form .input.currency-after:after {
+  font-weight: 600;
+  content: 'руб';
+  position: absolute;
+  right: 5px;
+  top: 0;
+  height: 30px;
+  line-height: 30px;
 }
 form.default-form .input input {
   -webkit-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
@@ -837,8 +1063,14 @@ form.default-form .input input {
   border: 1px solid #dbdbdb;
   height: 30px;
   line-height: 28px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media only screen and (min-width: 992px) {
+  form.default-form .input input {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 form.default-form .input input:focus {
   border-color: #a4a4a4;
@@ -873,9 +1105,9 @@ form.default-form .input.file .file-input-label:hover {
 form.default-form .input.file .filename,
 form.default-form .input.file .clear-file-input {
   font-weight: 700;
+  line-height: 20px;
   display: inline-block;
   vertical-align: middle;
-  line-height: 20px;
 }
 form.default-form .input.file .clear-file-input {
   position: relative;
@@ -905,6 +1137,41 @@ form.default-form .input.select-date .column:last-child {
   width: 100%;
   margin-left: 0;
 }
+.radio-custom {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  height: 20px;
+  line-height: 20px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.radio-custom > input[type=radio] {
+  display: none;
+}
+.radio-custom > .radio-label {
+  padding-left: 25px;
+}
+.radio-custom > .radio-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  background: #fff;
+  border: solid 1px #ededed;
+  width: 13px;
+  height: 13px;
+  margin-top: -6.5px;
+  border-radius: 100%;
+}
+.radio-custom > input[type=radio]:checked + .radio-icon {
+  -webkit-box-shadow: inset 0 0 0 3px #fff;
+  box-shadow: inset 0 0 0 3px #fff;
+  background: #c00;
+  border-color: #c00;
+}
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
   .m_header .signin a .s-icon-signin,
   .m_header .lang a:after,
@@ -912,11 +1179,17 @@ form.default-form .input.select-date .column:last-child {
   .m_girls .item .info .verified:before,
   .m_girls .item .info .tel:after,
   .m_girls .item .info .subway:after,
-  .m_girls .item .info .comments:after {
+  .m_girls .item .info .comments:after,
+  .checkbox input[type="checkbox"] + .check-icon:after {
     background-image: url("../images/sprite@2x.png");
     -webkit-background-size: 200px 300px;
     background-size: 200px 300px;
   }
+}
+.custom-scrollbar {
+  position: relative;
+  overflow: auto;
+  width: 100%;
 }
 @media screen and (max-width: 767px) {
   .select2-container {
@@ -953,6 +1226,16 @@ form.default-form .input.select-date .column:last-child {
 }
 body > .select2-container {
   width: auto !important;
+}
+.select2-results__options {
+  position: relative;
+}
+.ymaps-2-1-42-map-copyrights-promo,
+.ymaps-2-1-42-copyrights-pane {
+  display: none !important;
+  opacity: 0 !important;
+  font-size: 0 !important;
+  text-indent: -9999px !important;
 }
 table {
   width: 100%;
@@ -1283,6 +1566,11 @@ table td + td {
 @media only screen and (min-width: 992px) {
   .m_girls .item {
     height: 376px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .m_girls .item {
+    margin-bottom: 30px;
   }
 }
 .m_girls .item:hover {
@@ -1993,6 +2281,174 @@ table td + td {
   padding: 5px 0;
   margin-right: 10px;
   text-decoration: underline;
+}
+.m_profile-add .services .grid-column:before,
+.m_profile-add .services .grid-column:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+@media screen and (min-width: 568px) {
+  .m_profile-add .services .grid-column > .grid-column {
+    float: left;
+    width: 48.5%;
+  }
+}
+.m_profile-add .times .column {
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  .m_profile-add .times .column:first-child {
+    width: 75% !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .m_profile-add .times .column:first-child .input {
+    padding-right: 0px !important;
+    width: 33% !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .m_profile-add .times .column:first-child .label {
+    width: 62% !important;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .m_profile-add .times .column:first-child .label {
+    width: 51% !important;
+  }
+}
+@media screen and (min-width: 568px) {
+  .m_profile-add .times .column:last-child:after {
+    content: "—";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 28px;
+    line-height: 28px;
+    width: 47%;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .m_profile-add .times .column:last-child:after {
+    display: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .m_profile-add .times .column:last-child:after {
+    display: block;
+    content: "—";
+    position: absolute;
+    left: -48%;
+    top: 0;
+    height: 28px;
+    line-height: 28px;
+    width: 47%;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .m_profile-add .times .column:last-child {
+    width: 25% !important;
+  }
+}
+.m_profile-add .times .column:last-child .label {
+  opacity: 0;
+}
+@media screen and (min-width: 568px) {
+  .m_profile-add .times .column:last-child .label {
+    opacity: 1;
+    text-align: center;
+  }
+  .m_profile-add .times .column:last-child .label span {
+    position: relative;
+    left: -26%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .m_profile-add .times .column:last-child .label {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .m_profile-add .times .column:last-child .input {
+    width: 100% !important;
+    padding-left: 0;
+  }
+}
+.m_profile-add .attach-images .attached > div {
+  margin: 5px 0;
+}
+.m_profile-add .attach-images .attached-file {
+  position: relative;
+  background: #fafafa;
+  padding: 5px 10px 5px 40px;
+  margin-bottom: 15px;
+}
+.m_profile-add .attach-images .attached-file:after {
+  content: '';
+  background: url("../images/sprite.png") no-repeat -50px -100px;
+  width: 15px;
+  height: 11px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.m_profile-add .attach-images .attached-file:last-child {
+  margin-bottom: 0;
+}
+.m_profile-add .attach-images .attached-file .clear-file-input {
+  position: absolute !important;
+  left: 160px;
+  top: auto !important;
+  bottom: 5px;
+}
+.m_profile-add .attach-images .file {
+  float: none;
+  line-height: 20px;
+  width: 100%;
+}
+.m_profile-add .attach-images .remark {
+  margin-top: 0 !important;
+}
+.m_profile-add .additional .columns {
+  position: relative;
+  padding-right: 40px;
+}
+@media screen and (min-width: 568px) {
+  .m_profile-add .additional .columns {
+    float: left;
+    width: 47%;
+  }
+}
+.m_profile-add .additional .columns:after {
+  content: 'лет';
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 30px;
+}
+.m_profile-add .additional .columns .column {
+  position: relative;
+  width: 50%;
+  float: left;
+  padding-left: 30px;
+}
+.m_profile-add .additional .columns .column:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 30px;
+  padding-right: 5px;
+  width: 30px;
+}
+.m_profile-add .additional .columns .column:first-child:after {
+  content: "от";
+}
+.m_profile-add .additional .columns .column:last-child:after {
+  content: "до";
+  text-align: right;
 }
 .m_sidebar {
   -webkit-transition: all 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);

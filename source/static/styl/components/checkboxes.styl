@@ -1,0 +1,44 @@
+.checkbox
+  position relative
+  input[type="checkbox"]
+    display none
+    & + .check-icon
+      user-select-none()
+      width 17px
+      height 17px
+      position absolute
+      left 0
+      top 6.5px
+      border 1px solid $border-input
+      cursor pointer
+      &:after
+        anim()
+        content ''
+        background: url('../images/sprite.png') no-repeat -50px -100px;
+        width: 15px;
+        height: 11px;
+        position absolute
+        left 50%
+        top 50%
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+        opacity 0
+        transform scale(0.1) rotate(135deg)
+  input[type="checkbox"]
+    & + .check-icon
+      cursor pointer
+      & + .check-label
+        user-select-none()
+        display inline-block
+        vertical-align middle
+        padding-left 30px
+        color #999
+        font-size 14px
+        cursor pointer
+        padding-top 4px
+  input[type="checkbox"]:checked
+    & + .check-icon:after
+      opacity 1
+      transform scale(1) rotate(0deg)
+    & + .check-icon + .check-label
+      color $base-text-dark

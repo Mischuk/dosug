@@ -24,25 +24,1453 @@ block content
           .grid-column
             .data.l-bg
               .section-title.bold.border Ваши данные
+              .row
+                label
+                  span.label Название баннера:
+                  div.input: input(type="text" placeholder="")
+              .row
+                label
+                  span.label Имя на английском:
+                  div.input: input(type="text" placeholder="")
+              .row
+                label
+                  span.label Возраст:
+                  div.input: input(type="text" placeholder="")
+              .row.columns-not-equal
+                .column
+                  label
+                    span.label Рост:
+                    div.input: input(type="text" placeholder="")
+                .column
+                  label
+                    span.label Вес:
+                    div.input: input(type="text" placeholder="")
+              .row
+                label
+                  span.label Размер груди:
+                  div.input: input(type="text" placeholder="1-12")
+              .row
+                label
+                  span.label Размер одежды:
+                  div.input: input(type="text" placeholder="36-80")
+              .row
+                label
+                  span.label Размер обуви:
+                  div.input: input(type="text" placeholder="35-42")
+              .row
+                label
+                  span.label Цвет волос:
+                  div.input
+                    select(name="date-day")
+                      option(value="" disabled="disabled" selected="selected") Выберите
+                      option(value="01") Брюнетка
+                      option(value="02") Шатенка
+                      option(value="03") Рыжая
+                      option(value="04") Русая
+                      option(value="05") Блондинка
+              .row
+                label
+                  span.label Интимная стрижка:
+                  div.input
+                    select(name="date-day")
+                      option(value="" disabled="disabled" selected="selected") Выберите
+                      option(value="01") Полная депиляция
+                      option(value="02") Аккуратная стрижка
+                      option(value="03") Натуральная
+              .row
+                label
+                  span.label Телефон:
+                  div.input: input(type="text" placeholder="+7 (XXX) XXX-XX-XX").mask-tel
+              .row.columns-not-equal.times
+                .column
+                  label
+                    span.label Время:
+                    div.input
+                      select(name="clock-start")
+                        option(value="00:00" selected="selected") 00:00
+                        option(value="00:30") 00:30
+                        option(value="01:00") 01:00
+                        option(value="01:30") 01:30
+                        option(value="02:00") 02:00
+                        option(value="02:30") 02:30
+                        option(value="03:00") 03:00
+                        option(value="03:30") 03:30
+                        option(value="04:00") 04:00
+                        option(value="04:30") 04:30
+                        option(value="05:00") 05:00
+                        option(value="05:30") 05:30
+                        option(value="06:00") 06:00
+                        option(value="06:30") 06:30
+                        option(value="07:00") 07:00
+                        option(value="07:30") 07:30
+                        option(value="08:00") 08:00
+                        option(value="08:30") 08:30
+                        option(value="09:00") 09:00
+                        option(value="09:30") 09:30
+                        option(value="10:00") 10:00
+                        option(value="10:30") 10:30
+                        option(value="11:00") 11:00
+                        option(value="11:30") 11:30
+                        option(value="12:00") 12:00
+                        option(value="12:30") 12:30
+                        option(value="13:00") 13:00
+                        option(value="13:30") 13:30
+                        option(value="14:00") 14:00
+                        option(value="14:30") 14:30
+                        option(value="15:00") 15:00
+                        option(value="15:30") 15:30
+                        option(value="16:00") 16:00
+                        option(value="16:30") 16:30
+                        option(value="17:00") 17:00
+                        option(value="17:30") 17:30
+                        option(value="18:00") 18:00
+                        option(value="18:30") 18:30
+                        option(value="19:00") 19:00
+                        option(value="19:30") 19:30
+                        option(value="20:00") 20:00
+                        option(value="20:30") 20:30
+                        option(value="21:00") 21:00
+                        option(value="21:30") 21:30
+                        option(value="22:00") 22:00
+                        option(value="22:30") 22:30
+                        option(value="23:00") 23:00
+                        option(value="23:30") 23:30
+                .column
+                  label
+                    span.label: span &nbsp;
+                    div.input
+                      select(name="clock-finish")
+                        option(value="00:00") 00:00
+                        option(value="00:30") 00:30
+                        option(value="01:00") 01:00
+                        option(value="01:30") 01:30
+                        option(value="02:00") 02:00
+                        option(value="02:30") 02:30
+                        option(value="03:00") 03:00
+                        option(value="03:30") 03:30
+                        option(value="04:00") 04:00
+                        option(value="04:30") 04:30
+                        option(value="05:00") 05:00
+                        option(value="05:30") 05:30
+                        option(value="06:00") 06:00
+                        option(value="06:30") 06:30
+                        option(value="07:00") 07:00
+                        option(value="07:30") 07:30
+                        option(value="08:00") 08:00
+                        option(value="08:30") 08:30
+                        option(value="09:00") 09:00
+                        option(value="09:30") 09:30
+                        option(value="10:00") 10:00
+                        option(value="10:30") 10:30
+                        option(value="11:00") 11:00
+                        option(value="11:30") 11:30
+                        option(value="12:00") 12:00
+                        option(value="12:30") 12:30
+                        option(value="13:00") 13:00
+                        option(value="13:30") 13:30
+                        option(value="14:00") 14:00
+                        option(value="14:30") 14:30
+                        option(value="15:00") 15:00
+                        option(value="15:30") 15:30
+                        option(value="16:00") 16:00
+                        option(value="16:30") 16:30
+                        option(value="17:00") 17:00
+                        option(value="17:30") 17:30
+                        option(value="18:00") 18:00
+                        option(value="18:30") 18:30
+                        option(value="19:00") 19:00
+                        option(value="19:30") 19:30
+                        option(value="20:00") 20:00
+                        option(value="20:30") 20:30
+                        option(value="21:00") 21:00
+                        option(value="21:30") 21:30
+                        option(value="22:00") 22:00
+                        option(value="22:30") 22:30
+                        option(value="23:00") 23:00
+                        option(value="23:30" selected="selected") 23:30
+              .row
+                label
+                  span.label Отвечаю на:
+                  div.input
+                    select(name="date-day")
+                      option(value="all" selected="selected") звонки и SMS
+                      option(value="01") только SMS
+                      option(value="02") только звонки
+              .row
+                label
+                  span.label Массажистка:
+                  div.checkbox.input
+                    input(type="checkbox" name="massage")
+                    span.check-icon
+                    span.check-label
+                      span.md-visible Анкета будет показываться только в разделе "Массажистки"<br><br>
+                      span.md-hidden Только для раздела "Массажистки"<br><br>
           .grid-column
             .rates.l-bg
               .section-title.bold.border Тарифы
+              .row.columns-equal
+                .column
+                  .column-title Аппартаменты
+                  .row
+                    label
+                      span.label 1 час
+                      div.input.currency-after: input(type="text" placeholder="")
+                  .row
+                    label
+                      span.label 2 часа
+                      div.input.currency-after: input(type="text" placeholder="")
+                  .row
+                    label
+                      span.label Ночь
+                      div.input.currency-after: input(type="text" placeholder="")
+                  .row
+                    label
+                      span.label Анал +
+                      div.input.currency-after: input(type="text" placeholder="")
+                    label
+                      span.label &nbsp;
+                      .input.remark.mt-n Доплата, если есть
+                .column
+                  .column-title Выезд
+                  .row
+                    label
+                      span.label 1 час
+                      div.input.currency-after: input(type="text" placeholder="")
+                  .row
+                    label
+                      span.label 2 часа
+                      div.input.currency-after: input(type="text" placeholder="")
+                  .row
+                    label
+                      span.label Ночь
+                      div.input.currency-after: input(type="text" placeholder="")
+
             .about.l-bg
               .section-title.bold.border О себе
+              .row
+                textarea(placeholder="Текст о себе")
+              .row
+                textarea(placeholder="Текст о себе на английском")
         .grid-row
           .location.l-bg
             .section-title.bold.border Ваше местоположение
+            .row.grid-row
+              .grid-column
+                .location-subway
+                  .title: b Выберите метро:
+                  <br>
+                  .list.custom-scrollbar(style="max-height:280px")
+                    ul
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>А</b>виамоторная
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Автозаводская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Академическая
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Александровский сад
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Алексеевская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Алма-Атинская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Алтуфьево
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Аннино
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Арбатская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Аэропорт
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>Б</b>абушкинская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Багратионовская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Баррикадная
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Бауманская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Беговая
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Белорусская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Беляево
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Бибирево
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Библиотека имени Ленина
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Битцевский парк
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Борисово
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Боровицкая
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Ботанический сад
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Братиславская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Бульвар адмирала Ушакова
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Бульвар Дмитрия Донского
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Бунинская аллея
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Варшавская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>В</b>ДНХ
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Владыкино
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Водный стадион
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Войковская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Волгоградский проспект
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Волжская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Волоколамская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Воробьевы горы
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Выставочная
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Выхино
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>Д</b>еловой центр
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Динамо
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Дмитровская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Добрынинская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Домодедовская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Достоевская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Дубровка
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>Ж</b>улебино
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>З</b>ябликово
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>И</b>змайловская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>К</b>алужская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Кантемировская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Каховская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Каширская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Киевская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Китай-город
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Кожуховская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Коломенская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Комсомольская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Коньково
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Красногвардейская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Краснопресненская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Красносельская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Красные ворота
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Крестьянская застава
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Кропоткинская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Крылатское
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Кузнецкий мост
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Кузьминки
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Кунцевская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Курская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Кутузовская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>Л</b>енинский проспект
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Лермонтовский проспект
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Лесопарковая
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Лубянка
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Люблино
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>М</b>арксистская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Марьина роща
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Марьино
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Маяковская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Медведково
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Международная
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Менделеевская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Митино
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Молодежная
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Мякинино
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>Н</b>агатинская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Нагорная
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Нахимовский проспект
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Новогиреево
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Новокосино
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Новокузнецкая
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Новослободская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Новоясеневская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Новые Черемушки
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>О</b>ктябрьская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Октябрьское поле
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Орехово
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Отрадное
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Охотный ряд
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>П</b>авелецкая
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Парк культуры
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Парк Победы
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Партизанская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Первомайская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Перово
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Петровско-Разумовская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Печатники
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Пионерская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Планерная
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Площадь Ильича
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Площадь Революции
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Полежаевская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Полянка
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Пражская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Преображенская площадь
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Пролетарская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Проспект Вернадского
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Проспект Мира
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Профсоюзная
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Пушкинская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Пятницкое шоссе
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>Р</b>ечной вокзал
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Рижская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Римская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Рязанский проспект
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>С</b>авеловская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Свиблово
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Севастопольская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Семеновская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Серпуховская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Славянский бульвар
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Смоленская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Сокол
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Сокольники
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Спартак
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Спортивная
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Сретенский бульвар
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Строгино
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Студенческая
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Сухаревская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Сходненская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>Т</b>аганская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Тверская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Театральная
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Текстильщики
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Теплый Стан
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Тимирязевская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Третьяковская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Трубная
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Тульская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Тургеневская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Тушинская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>У</b>лица 1905 года
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Улица Академика Янгеля
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Улица Горчакова
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Улица Подбельского
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Улица Скобелевская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Улица Старокачаловская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Университет
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>Филевский парк
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Фили
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Фрунзенская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>Ц</b>арицыно
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Цветной бульвар
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>Ч</b>еркизовская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Чертановская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Чеховская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Чистые пруды
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Чкаловская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>Ш</b>аболовская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Шипиловская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Шоссе Энтузиастов
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>Щ</b>елковская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Щукинская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>Э</b>лектрозаводская
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>Ю</b>го-Западная
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label Южная
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-subway")
+                          span.check-icon
+                          span.check-label <b>Я</b>сенево
+              .grid-column
+                .title: b Или укажите место на карте:
+                <br>
+                script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+                #map(style="width: 100%; height: 280px")
         .grid-row
           .services.l-bg
             .section-title.bold.border Услуги
+            .row
+              .grid-column
+                .grid-column
+                  .sex
+                    .section-title.bold Секс
+                    ul
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Секс
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Секс классический
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Секс анальный
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Секс групповой
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Секс лесбийский
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Услуги семейной паре
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Минет в презервативе
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Минет без резинки
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Минет глубокий
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Минет в машине
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Куннилингус
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Игрушки
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Окончание на грудь
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Окончание на лицо
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Окончание в рот
+                .grid-column
+                  .massage
+                    .section-title.bold Массаж
+                    ul
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Массаж классический
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Массаж профессиональный
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Массаж расслабляющий
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Массаж тайский
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Массаж урологический
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Массаж точечный
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Массаж эротический
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Массаж ветка сакуры
+                  <br>
+                  .tease
+                    .section-title.bold Стриптиз
+                    ul
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Стриптиз профи
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Стриптиз не профи
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Лесби откровенное
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Лесби-шоу легкое
+              .grid-column
+                .grid-column
+                  .extreme
+                    .section-title.bold Экстрим
+                    ul
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Страпон
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Анилингус делаю
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Золотой дождь выдача
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Золотой дождь прием
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Копро выдача
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Фистинг анальный
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Фистинг классический
+                  <br>
+                  .misc
+                    .section-title.bold Разное
+                    ul
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label ролевые игры
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Фото/видео съемка
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Эксорт
+                .grid-column
+                  .dominations
+                    .section-title.bold Садо-мазо
+                    ul
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Бондаж
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Госпожа
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Рабыня
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Игры
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Легкая доминация
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Порка
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Фетиш
+                      li
+                        label.checkbox
+                          input(type="checkbox" name="profile-services")
+                          span.check-icon
+                          span.check-label Трамплинг
         .grid-row
           .grid-column
             .images.l-bg
               .section-title.bold.border Добавьте фото
+              .attach-images
+                .row
+                  label.input.file
+                    span.file-input-icon
+                    span.file-input-label Прикрепить файлы
+                    input(type="file" placeholder="" multiple accept=".png, .jpg").multiple
+                    .attached.hide
+                      //- span.filename
+                      //- span.clear-file-input ×
+                .row
+                  .remark Формат файла: .jpg или .png
+                  .remark Размер файла не больше 2 мб
+                .row
+                  label.input.file
+                    span.file-input-icon
+                    span.file-input-label Прикрепить проверочное фото
+                    input(type="file" placeholder="" accept=".png, .jpg").single
+                    .attached.hide
+                      span.filename
+                      span.clear-file-input ×
+                  .row
+                    .remark Для того, чтоб анкета была с пометкой фото проверено, прикрепите свою фотографию, где вы с листком бумаги, с датой написаной от руки
           .grid-column
             .video.l-bg
               .section-title.bold.border Добавьте видео
+              .row
+                label.input.file
+                  span.file-input-icon
+                  span.file-input-label Прикрепить файл
+                  input(type="file" placeholder="" accept=".flv").single
+                  .attached.hide
+                    span.filename
+                    span.clear-file-input ×
+              .row
+                .remark Допустимые форматы файлов: FLV.<br>Максимальный размер файла: 20 МБ.
             .additional.l-bg
               .section-title.bold.border Дополнительная информация
+              .row
+                label
+                  span.label Национальность:
+                  div.input
+                    select(name="date-day")
+                      option(value="" disabled="disabled" selected="selected") Выберите
+                      option(value="01") Брюнетка
+                      option(value="02") Шатенка
+                      option(value="03") Рыжая
+                      option(value="04") Русая
+                      option(value="05") Блондинка
+              .row
+                label
+                  span.label Возраст партнера:
+                  div.input.columns
+                    .column
+                      input(type="text" placeholder="")
+                    .column
+                      input(type="text" placeholder="")
+
         .grid-row
           button(type="submit").btn-lead.medium.center.submit Сохранить

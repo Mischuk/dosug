@@ -1,0 +1,124 @@
+.m_profile-add
+  .services
+    .grid-column
+      clearfix()
+      > .grid-column
+        @media screen and (min-width: 568px)
+          float left
+          width 48.5%
+  .times
+    .column
+      position relative
+      &:first-child
+        @media SM
+          width 75% !important
+        .input
+          @media SM
+            padding-right 0px !important
+            width 33% !important
+        .label
+          @media SM
+            width 62% !important
+          @media MD
+            width 51% !important
+      &:last-child
+        @media screen and (min-width: 568px)
+          &:after
+            content "—"
+            position absolute
+            left 0
+            top 0
+            height 28px
+            line-height 28px
+            width 47%
+            text-align center
+        @media SM
+          &:after
+            display none
+        @media MD
+          &:after
+            display block
+            content "—"
+            position absolute
+            left -48%
+            top 0
+            height 28px
+            line-height 28px
+            width 47%
+            text-align center
+        @media SM
+          width 25% !important
+        .label
+          opacity 0
+          @media screen and (min-width: 568px)
+            opacity 1
+            text-align center
+            span
+              position relative
+              left -26%
+          @media SM
+            display none
+        .input
+          @media SM
+            width 100% !important
+            padding-left 0
+
+  .attach-images
+    .attached > div
+      margin 5px 0
+    .attached-file
+      position relative
+      background #fafafa
+      padding 5px 10px 5px 40px
+      margin-bottom 15px
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -50px -100px;
+        width: 15px;
+        height: 11px;
+        position absolute
+        left 10px
+        top 10px
+      &:last-child
+        margin-bottom 0
+      .clear-file-input
+        position absolute !important
+        left 160px
+        top auto !important
+        bottom 5px
+    .file
+      float none
+      line-height 20px
+      width 100%
+    .remark
+      margin-top 0 !important
+  .additional
+    .columns
+      position relative
+      padding-right 40px
+      @media screen and (min-width: 568px)
+        float left
+        width 47%
+      &:after
+        content 'лет'
+        position absolute
+        right 0
+        top 0
+        line-height 30px
+      .column
+        position relative
+        width 50%
+        float left
+        padding-left 30px
+        &:after
+          position absolute
+          left 0
+          top 0
+          line-height 30px
+          padding-right 5px
+          width 30px
+        &:first-child:after
+          content "от"
+        &:last-child:after
+          content "до"
+          text-align right

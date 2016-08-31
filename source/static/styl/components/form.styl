@@ -4,10 +4,74 @@ form.default-form
   max-width 500px
   &.full-width
     max-width 100%
+  textarea
+    anim()
+    font-family 'Open Sans', sans-serif
+    font-size 14px
+    line-height 1.4
+    color $base-text-dark
+    border 1px solid $border-input
+    width 100%
+    height 125.2px
+    max-height 125.2px
+    padding 10px 15px
+    &:focus
+      border-color $border-input - 25%
   .select2-container
     width 100% !important
   .row
     margin-bottom 15px
+    margin-top 15px
+    &:last-child
+      margin-bottom 0
+    &.columns-not-equal
+      .column
+        float left
+        &:first-child
+          width 48%
+          @media screen and (min-width: 568px)
+            width 65%
+          @media MD
+            width 56%
+          .label
+            width 72%
+            @media MD
+              width 67%
+          .input
+            @media screen and (min-width: 568px)
+              width 28%
+            @media MD
+              width 33%
+        &:last-child
+          width 48%
+          margin-left 4%
+          @media screen and (min-width: 568px)
+            width 35%
+            margin-left 0
+          @media MD
+            width 44%
+          .label
+            @media screen and (min-width: 568px)
+              text-align right
+              padding-right 10px
+            @media MD
+              width 58%
+          .input
+            @media MD
+              width 42%
+    &.columns-equal
+      .column
+        @media screen and (min-width: 240px)
+          float left
+          width 48%
+        &:last-child
+          @media screen and (min-width: 240px)
+            margin-left 4%
+        .column-title
+          semibold()
+          color #666
+          @media screen and (min-width: 568px)
+            padding-left 35%
   .submit
     max-width 185px
   label
@@ -19,19 +83,41 @@ form.default-form
     padding-bottom 5px
     @media screen and (min-width: 568px)
       float left
-      width 175px
+      line-height 30px
+      padding-bottom 0
+      width 47%
+    @media MD
+      width 38%
+
   .input
     @media screen and (min-width: 568px)
       float left
-      width 310px
+      width 53%
+    @media MD
+      width 62%
+    &.currency-after
+      position relative
+      padding-right 40px
+      &:after
+        semibold()
+        content 'руб'
+        position absolute
+        right 5px
+        top 0
+        height 30px
+        line-height 30px
+
     input
       anim()
       width 100%
       border 1px solid $border-input
       height 30px
       line-height 28px
-      padding-left 20px
-      padding-right 20px
+      padding-left 10px
+      padding-right 10px
+      @media MD
+        padding-left 20px
+        padding-right 20px
       &:focus
         border-color $border-input - 25%
     &.file
@@ -59,9 +145,9 @@ form.default-form
       .filename,
       .clear-file-input
         bold()
+        line-height 20px
         display inline-block
         vertical-align middle
-        line-height 20px
       .clear-file-input
         position relative
         top 1px
@@ -71,6 +157,7 @@ form.default-form
         font-size 20px
         text-align center
         cursor pointer
+
     &.select-date
       clearfix()
       .column

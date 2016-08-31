@@ -1,0 +1,26 @@
+.radio-custom
+  user-select-none()
+  position relative
+  height 20px
+  line-height 20px
+  cursor pointer
+  margin-top 5px
+  & > input[type=radio]
+    display none
+  > .radio-label
+    padding-left 25px
+  & > .radio-icon
+    position absolute
+    left 0
+    top 50%
+    background #fff
+    border solid 1px #ededed
+    width 13px
+    height 13px
+    margin-top -(@height/2)
+    border-radius 100%
+  & > input[type=radio]:checked
+    & + .radio-icon
+      box-shadow inset 0 0 0 3px #fff
+      background $base-color
+      border-color $base-color
