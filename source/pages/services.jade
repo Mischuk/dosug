@@ -1,0 +1,52 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Платные услуги
+
+block breadcrumbs
+  -
+    var breadcrumbs = [
+      {link: 'Все проститутки Москвы'},
+      {link: 'Платные услуги'}
+    ]
+  include ../modules/breadcrumbs/m_breadcrumbs
+
+block content
+  // Sidebar
+  aside.m_sidebar
+    include ../modules/sidebar/user-navs.jade
+  // Partnership banners
+  aside.m_partnership
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+1")
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+2")
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+3")
+  // Content
+  main
+    h1 Платные услуги
+    .grid-row
+      .partnership-rates.l-bg
+        .section-title.bold.border
+          | Тарифы на размещение баннеров
+          a(href="#").btn-lead Пополнить баланс
+        table
+          tr
+            th Город: Москва
+            th Стоимость/сутки
+          tr
+            td Стоимость размещения одной вип анкеты:
+            td <span class="sum">290</span> <span class="currency">руб</span>
+          tr
+            td Стоимость размещения одной анкеты массажистки:
+            td <span class="sum">75</span> <span class="currency">руб</span>
+          tr
+            td Стоимость размещения одной анкеты:
+            td <span class="sum">150</span> <span class="currency">руб</span>
+          tr
+            td Стоимость размещения одного интим салона:
+            td <span class="sum">75</span> <span class="currency">руб</span>
+          tr
+            td Баннер <span class="highlight">200x300</span>, правый блок в ротации:
+            td <span class="sum">200</span> <span class="currency">руб</span>
+          tr
+            td Баннер <span class="highlight">960x90</span>, подвал сайта:
+            td <span class="sum">200</span> <span class="currency">руб</span>

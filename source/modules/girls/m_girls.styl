@@ -6,7 +6,7 @@
     background #fff
     box-shadow 1px 1px 3px rgba(0,0,0,.15)
     @media MD
-      height 376px
+      height 390px
     @media SM
       margin-bottom 30px
     &:hover
@@ -45,6 +45,9 @@
         font-style italic
         font-size 22px
         line-height 1
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       .parameters
         font-size 12px
         span + span
@@ -62,7 +65,7 @@
             & + th
               text-align left
           td
-            padding 3px 0
+            padding 6px 0
             & + td
               text-align left
           tr:last-child td

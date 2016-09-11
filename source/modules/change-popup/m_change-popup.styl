@@ -1,0 +1,91 @@
+.m_change-popup
+  max-width 840px !important
+  .noUi-target
+    border none
+    box-shadow none
+    background #e6e6e6
+    height 4px
+  .noUi-horizontal .noUi-handle
+    top -8px
+    width 20px
+    height 20px
+    border-radius 50%
+    border none
+    background $base-color
+    box-shadow none
+    &:before, &:after
+      display none
+  .paragraph
+    padding-top 0
+    padding-bottom 15px
+    font-size 16px
+  .range-slider
+    .row:first-child
+      position relative
+      padding-left 35px
+      padding-right 35px
+      .min, .max
+        position absolute
+        top 0
+        line-height 30px
+        height 30px
+        margin-top -15px
+        width 35px
+        text-align center
+      .min
+        left 0
+      .max
+        right 0
+    .row:last-child
+      text-align center
+    .submit
+      margin-top 15px
+      @media screen and (min-width: 568px)
+        width auto
+        margin-top 0
+        padding-left 15px !important
+        padding-right 15px !important
+        display inline-block
+        vertical-align middle
+    .tax
+      margin-top 15px
+      margin-bottom 10px
+      @media screen and (min-width: 568px)
+        margin-right 30px
+    .tax, .position
+      @media screen and (min-width: 568px)
+        display inline-block
+        vertical-align middle
+        margin-top 25px
+        margin-bottom 15px
+      .label, .input, #pos, input, span.bold
+        display inline-block
+        vertical-align middle
+      .label
+        width 30%
+        height 30px
+        line-height 30px
+        @media screen and (min-width: 568px)
+          width auto
+      .input
+        position relative
+        width 68%
+        @media screen and (min-width: 568px)
+          width auto
+        span.bold
+          line-height 30px
+          height 30px
+      input, #pos
+        anim()
+        width 70px
+        height 30px
+        line-height 30px
+        padding 0 5px
+        border 1px solid $border
+        font-weight bold
+        &:focus
+          border-color $border - 25%
+      #pos
+        border-color #fff
+
+

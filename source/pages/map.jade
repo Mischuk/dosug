@@ -1,0 +1,74 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Интим-карта
+
+block breadcrumbs
+  -
+    var breadcrumbs = [
+      {link: 'Все проститутки Москвы'},
+      {link: 'Интим-карта'}
+    ]
+  include ../modules/breadcrumbs/m_breadcrumbs
+
+block content
+  // Partnership banners
+  aside.m_partnership
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+1")
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+2")
+  // Content
+  main
+    h1 Интим-карта
+    script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug" type="text/javascript")
+    script.
+      ymaps.ready(init);
+
+      function init () {
+          var map = new ymaps.Map('map', {
+                  center: [55.650625, 37.62708],
+                  zoom: 13,
+                  controls: ['zoomControl']
+              }, {
+                  searchControlProvider: 'yandex#search'
+              }),
+
+              BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                '<div class="popup-map">' +
+                    '<b>{{properties.name}}</b><br />' +
+                    '<a href="#"><img src="{{properties.image}}"></a> ' +
+                '</div>'
+              );
+
+          var placemark = new ymaps.Placemark([55.650625, 37.62708], {
+            name: 'Лиза',
+            image: 'http://dosug197.net/media/cache/46/4a/464a3f9d5833f2de54cbf04be8ea23d2.jpg'
+          }, {
+            balloonContentLayout: BalloonContentLayout,
+            balloonPanelMaxMapArea: 0,
+            iconLayout: 'default#image',
+            iconImageHref: '2dosug98.com/images/marker-normal.png',
+            iconImageSize: [40, 55],
+            iconImageOffset: [-20, -55]
+          });
+
+          var placemark2 = new ymaps.Placemark([55.640625, 37.60708], {
+            name: 'Лера',
+            image: 'http://dosug197.net/media/cache/dc/20/dc200035ef42c9fc232f7ccb2dfdd1e3.jpg'
+          }, {
+            balloonContentLayout: BalloonContentLayout,
+            balloonPanelMaxMapArea: 0,
+            iconLayout: 'default#image',
+            iconImageHref: '2dosug98.com/images/marker-normal.png',
+            iconImageSize: [40, 55],
+            iconImageOffset: [-20, -55]
+          });
+
+          map.geoObjects.add(placemark);
+          map.geoObjects.add(placemark2);
+          map.behaviors.disable('scrollZoom');
+      }
+
+    .m_map
+      .l-bg
+        #map
+        p На карте обозначено местоположение зарегистрированных анкет. Кликнув на маркер Вы узнаете краткую информацию о девушке.

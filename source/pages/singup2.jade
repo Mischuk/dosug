@@ -1,0 +1,75 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Регистрационные данные
+
+block breadcrumbs
+  -
+    var breadcrumbs = [
+      {link: 'Все проститутки Москвы'},
+      {link: 'Регистрационные данные'}
+    ]
+  include ../modules/breadcrumbs/m_breadcrumbs
+
+block content
+  // Sidebar
+  aside.m_sidebar
+    include ../modules/sidebar/user-navs.jade
+  // Partnership banners
+  aside.m_partnership
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+1")
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+2")
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+3")
+  // Content
+  main
+    .m_signup.l-bg
+      h1 Регистрационные данные
+      form.default-form.full-width
+        .columns
+          .column-large
+            .row
+              label
+                span.label Ваш ник
+                div.input
+                  input.text(type="text", placeholder="")
+            .row
+              label
+                span.label Город
+                div.input
+                  input.text(type="text", placeholder="")
+            .row
+              label
+                span.label Ваш e-mail
+                div.input
+                  input.text(type="email", placeholder="")
+            .row
+              label
+                span.label Старый пароль
+                div.input
+                  input.text(type="password", placeholder="")
+            .row
+              label
+                span.label Новый пароль
+                div.input
+                  input.text(type="password", placeholder="")
+            .row
+              label
+                span.label Повторите пароль
+                div.input
+                  input.text(type="password", placeholder="")
+
+          .column-small
+            .row
+              label.input.file
+                span.file-input-icon
+                span.file-input-label Прикрепить файл
+                input(type="file" placeholder="" accept=".jpg, .png").single
+                .attached.hide
+                  span.filename
+                  span.clear-file-input ×
+            .row
+              .remark Допустимые форматы: jpg, png
+        .row
+          label
+            div.input.submit-center
+              input(class="submit btn-lead" type="submit" value="Сохранить изменения")

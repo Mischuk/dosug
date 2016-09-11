@@ -1,0 +1,70 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Мои баннеры
+
+block breadcrumbs
+  -
+    var breadcrumbs = [
+      {link: 'Все проститутки Москвы'},
+      {link: 'Мои баннеры'}
+    ]
+  include ../modules/breadcrumbs/m_breadcrumbs
+
+block content
+  // Sidebar
+  aside.m_sidebar
+    include ../modules/sidebar/user-navs.jade
+  // Partnership banners
+  aside.m_partnership
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+1")
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+2")
+  // Content
+  main
+    h1 Мои баннеры
+    .m_banners
+      .grid-row
+        .banners-activated.l-bg
+          .section-title.bold Баннер для индивидуалки Стэллы
+          .header
+            .position Баннер в подвале 960*90, в ротации
+            .info
+              .status.online Баннер включен
+              .date Отключение: <b>3 апреля 2016</b>
+          .image
+            img(class="fluid-image" src="http://placehold.it/670x70?text=Ads+Online")
+          .buttons
+            .cell: button.disable Отключить
+            .cell: button.edit Редактировать
+            .cell: button.remove Удалить
+
+      .grid-row
+        .banners-list
+          .item.l-bg
+            .image
+              img(class="fluid-image" src="http://placehold.it/115x170?text=Ads+1")
+            .details
+              .section-title.bold Баннер для индивидуалки Стэллы
+              .position Баннер в подвале 960*90, в ротации
+              .info
+                .status.offline Баннер отключен
+                .date Отключен: <b>1 апреля 2016</b>
+              .buttons
+                .cell: button.enable Включить
+                .cell: button.edit Редактировать
+                .cell: button.remove Удалить
+          .item.l-bg
+            .image
+              img(class="fluid-image" src="http://placehold.it/115x170?text=Ads+2")
+            .details
+              .section-title.bold Баннер для индивидуалки Стэллы
+              .position Баннер в подвале 960*90, в ротации
+              .info
+                .status.offline Баннер отключен
+                .date Отключен: <b>1 апреля 2016</b>
+              .buttons
+                .cell: button.enable Включить
+                .cell: button.edit Редактировать
+                .cell: button.remove Удалить
+      include ../modules/paginations/m_paginations
+

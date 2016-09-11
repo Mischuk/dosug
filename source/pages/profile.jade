@@ -1,0 +1,242 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Профиль
+
+block breadcrumbs
+  -
+    var breadcrumbs = [
+      {link: 'Все проститутки Москвы'},
+      {link: 'Елизаветочка'}
+    ]
+  include ../modules/breadcrumbs/m_breadcrumbs
+
+block content
+  h1 Елизаветочка
+  // Sidebar
+  aside.m_sidebar.large
+    .profile-sidebar
+      .play-video
+        a(href="#") Просмотреть видео
+      .images
+        a(href="girls/4.jpg").item: img(src="girls/4.jpg", alt="")
+        a(href="girls/5.jpg").item: img(src="girls/5.jpg", alt="")
+        a(href="girls/4.jpg").item: img(src="girls/4.jpg", alt="")
+        a(href="girls/5.jpg").item: img(src="girls/5.jpg", alt="")
+  // Partnership banners
+  aside.m_partnership
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+1")
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+2")
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+3")
+  // Content
+  main
+    .m_profile
+      .lead.l-bg
+        .m_girls
+          .item
+            .info
+              .tel: a(href="#") +7 890 453 45 45
+              .subway: a(href="#") Спортивная
+              .verified
+              .prices
+                table
+                  tr
+                    th(colspan="2") Тариф:
+                  tr
+                    td 1 час
+                    td <span class="sum">3 000</span> <span class="currency">руб</span>
+                  tr
+                    td 2 часа
+                    td <span class="sum">5 000</span> <span class="currency">руб</span>
+                  tr
+                    td Ночь
+                    td <span class="sum">10 000</span> <span class="currency">руб</span>
+              .prices
+                table
+                  tr
+                    th(colspan="2") Выезд:
+                  tr
+                    td 1 час
+                    td -
+                  tr
+                    td 2 часа
+                    td <span class="sum">6 000</span> <span class="currency">руб</span>
+                  tr
+                    td Ночь
+                    td <span class="sum">12 000</span> <span class="currency">руб</span>
+                  tr
+                    td Анал
+                    td <span class="sum">+2 000</span> <span class="currency">руб</span>
+            .parameters
+              .row
+                .label Город:
+                .value Москва
+              .row
+                .label Возраст:
+                .value 25 лет
+              .row
+                .label Рост:
+                .value 170 см
+              .row
+                .label Вес:
+                .value 61 кг
+              .row
+                .label Размер одежды:
+                .value 48
+              .row
+                .label Размер груди:
+                .value 3
+              .row
+                .label Цвет волос:
+                .value брюнетка
+              .row
+                .label Национальность:
+                .value славянка
+              .row
+                .label Возраст партнера:
+                .value 18-30 лет
+              .row
+                .label Интимная стрижка:
+                .value полная депиляция
+              .row
+                .label Время работы:
+                .value 00.00-24.00
+              .row
+                .label Отвечаю на:
+                .value звонки и смс
+              .row
+                .label Дата регистрации:
+                .value 2016-05-19
+              .row
+                .label Дата обновления:
+                .value 2016-05-22
+      .story.l-bg
+        .section-title.bold.border О себе
+        .row
+          p Я создана для любви и наслаждения. Я знаю, чего хочешь ты, и знаю, как все делать. Звони мне и ты получишь максимальное удовольствие! Я создана для любви и наслаждения. Я знаю, чего хочешь ты, и знаю, как все делать. Звони мне и ты получишь максимальное удовольствие! Я создана для любви и наслаждения. Я знаю, чего хочешь ты, и знаю, как все делать. Звони мне и ты получишь максимальное удовольствие!
+      .services.l-bg
+        .section-title.bold.border Услуги
+        .row
+          .grid-column
+            .grid-column
+              .sex
+                .section-title.bold Секс
+                ul
+                  li.yes Секс
+                  li.no Секс классический
+                  li.yes Секс анальный
+                  li.yes Секс групповой
+                  li.yes Секс лесбийский
+                  li.yes Услуги семейной паре
+                  li.yes Минет в презервативе
+                  li.yes Минет без резинки
+                  li.yes Минет глубокий
+                  li.yes Минет в машине
+                  li.yes Куннилингус
+                  li.yes Игрушки
+                  li.yes Окончание на грудь
+                  li.yes Окончание на лицо
+                  li.yes Окончание в рот
+            .grid-column
+              .massage
+                .section-title.bold Массаж
+                ul
+                  li.no Массаж классический
+                  li.no Массаж профессиональный
+                  li.no Массаж расслабляющий
+                  li.no Массаж тайский
+                  li.no Массаж урологический
+                  li.no Массаж точечный
+                  li.no Массаж эротический
+                  li.no Массаж ветка сакуры
+              <br>
+              .tease
+                .section-title.bold Стриптиз
+                ul
+                  li.no Стриптиз профи
+                  li.no Стриптиз не профи
+                  li.no Лесби откровенное
+                  li.no Лесби-шоу легкое
+          .grid-column
+            .grid-column
+              .extreme
+                .section-title.bold Экстрим
+                ul
+                  li.no Страпон
+                  li.no Анилингус делаю
+                  li.no Золотой дождь выдача
+                  li.no Золотой дождь прием
+                  li.no Копро выдача
+                  li.no Фистинг анальный
+                  li.no Фистинг классический
+              <br>
+              .misc
+                .section-title.bold Разное
+                ul
+                  li.no ролевые игры
+                  li.no Фото/видео съемка
+                  li.no Эксорт
+            .grid-column
+              .dominations
+                .section-title.bold Садо-мазо
+                ul
+                  li.no Бондаж
+                  li.no Госпожа
+                  li.no Рабыня
+                  li.no Игры
+                  li.no Легкая доминация
+                  li.no Порка
+                  li.no Фетиш
+                  li.no Трамплинг
+      .services.l-bg
+        .section-title.bold Услуги
+        .row
+          script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+          script.
+            //Map
+              ymaps.ready(init);
+              function init () {
+                var myMap = new ymaps.Map("profile-map", {
+                        center: [55.8083, 37.5868],
+                        zoom: 16,
+                        controls: ['zoomControl']
+                    }),
+                myPlacemark = new ymaps.Placemark([55.8083, 37.5868]);
+                myMap.geoObjects.add(myPlacemark);
+                myMap.behaviors.disable('scrollZoom');
+              }
+          #profile-map
+      .m_comments.l-bg
+        .section-title.bold Отзывы
+        .signin
+          .paragraph Оставлять отзывы могут только <a href="#">зарегистрированые</a> пользователи
+          form.default-form
+            .row
+              .column
+                label
+                  span.label E-mail
+                  .input: input.text(type="email" placeholder="")
+              .column
+                label
+                  span.label Пароль
+                  .input: input.text(type="password" placeholder="")
+              .column
+                input(class="submit btn-lead" type="submit" value="Войти")
+        .comments-box
+          .comment
+            .user-image
+              a(href="#"): img(src="http://placekitten.com/75/75", alt="")
+            .user-message
+              .message
+                p В своих тайных желаниях ты мечтаешь стать девушкой и одевать чулки, платья, нижнее бельё, красить губы помадкой? Фантазируешь как на коленях перед Госпожой, вымаливая получить хочть капельку удовольствия трешься своим телом о сексуальные ножки? Все твои мечты осуществятся в приватном общении с прямо
+              .bottom
+                .user-name: a(href="#") malina
+                .post-date 30.05.2016
+          .comment
+            .user-image
+              a(href="#"): img(src="http://placekitten.com/78/75", alt="")
+            .user-message
+              .message В своих тайных желаниях ты мечтаешь стать девушкой и одевать чулки, платья, нижнее бельё, красить губы помадкой? Фантазируешь как на коленях перед Госпожой, вымаливая получить хочть капельку удовольствия трешься своим телом о сексуальные ножки? Все твои мечты осуществятся в приватном общении с прямо
+              .bottom
+                .user-name: a(href="#") sexmachine
+                .post-date 30.05.2016

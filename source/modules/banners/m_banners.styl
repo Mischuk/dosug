@@ -1,0 +1,66 @@
+.m_banners
+  .banners-activated
+    .image
+      img
+        width 100%
+  .banners-list
+    .item
+      clearfix()
+      padding 0
+      .image
+        @media screen and (min-width: 568px)
+          float left
+          width 25%
+          margin-bottom 0
+      .details
+        @media screen and (min-width: 568px)
+          float right
+          width 75%
+          padding 20px
+    .image
+      text-align center
+      margin-bottom 15px
+      background #fafafa
+      padding 15px
+      img
+        display inline-block
+        vertical-align middle
+  .header
+    clearfix()
+    margin-bottom 15px
+    .position
+      @media screen and (min-width: 568px)
+        float left
+        width 50%
+    .info
+      @media screen and (min-width: 568px)
+        float right
+        width 50%
+        text-align right
+
+  .status, .date
+    @media SM
+      display inline-block
+      vertical-align middle
+  .status
+    bold()
+    @media SM
+      margin-right 15px
+    &.online
+      color #cc6666
+    &.offline
+      color #333
+  .buttons
+    margin-top 15px
+    @media screen and (min-width: 568px)
+      display table
+      width 100%
+      table-layout fixed
+    .cell
+      @media screen and (min-width: 568px)
+        display table-cell
+        vertical-align middle
+      & + .cell
+        margin-top 15px
+        @media screen and (min-width: 568px)
+          padding-left 7.5px

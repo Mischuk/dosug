@@ -1,0 +1,208 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Мои анкеты
+
+block breadcrumbs
+  -
+    var breadcrumbs = [
+      {link: 'Все проститутки Москвы'},
+      {link: 'Мои анкеты'}
+    ]
+  include ../modules/breadcrumbs/m_breadcrumbs
+
+block content
+  // Sidebar
+  aside.m_sidebar
+    include ../modules/sidebar/user-navs.jade
+  // Content
+  main
+    h1 Мои анкеты
+    .m_profiles
+      .header
+        form.default-form
+          .find
+            span.label: .md-hidden Поиск:
+            input.text(type="text", placeholder="Введите имя")
+          .sort
+            span.label Сортировка:
+            select(name="select-sort")
+              option(value="По дате") По дате
+              option(value="По тарифам") По тарифам
+              option(value="По просмотрам") По просмотрам
+          .show
+            span.label Показывать:
+            label.checkbox
+              input(type="checkbox" name="show-vip")
+              span.check-icon
+              span.check-label Только VIP
+            label.checkbox
+              input(type="checkbox" name="show-actual")
+              span.check-icon
+              span.check-label Только включенные
+      .profiles-options
+        .cell.selected
+          label.checkbox.large
+            input(type="checkbox" name="show-actual")
+            span.check-icon
+            span.check-label
+              span Выделено анкет:
+              span#profiles-selected 0
+        .cell: button(disabled).vip VIP СТАТУС
+        .cell: button(disabled).enable Включить
+        .cell: button(disabled).disable Отключить
+        .cell: button(disabled).change Изменить тариф
+        .cell: button(disabled).remove Удалить
+      .m_girls
+        .grid-column
+          .item
+            .image
+              a(href="#" style="background-image: url('girls/1.jpg')").url-image.block
+            .info
+              .name
+                .select-profile
+                  label.checkbox.large
+                    input(type="checkbox" name="profiles-select")
+                    span.check-icon
+                    span.check-text Елизаветочка
+              .tel: a(href="#") +7 890 453 45 45
+              .buttons
+                button.edit Редактировать
+                button.remove Удалить
+              .status.online Анкета включена
+              .buttons
+                button.disable Отключить
+              .vip.actived
+                .vip-status
+                  .icon
+                  .label VIP СТАТУС
+                  .cost расход <b>250</b> руб/час
+            .bottom
+              .row
+                .position
+                  span.label Позиция:
+                  span.value 13-16
+                .tax
+                  span.label Тариф:
+                  span.value 125 руб/час
+              .row
+                a(href="#change").call-change.change Изменить тариф
+        .grid-column
+          .item
+            .image
+              a(href="#" style="background-image: url('girls/4.jpg')").url-image.block
+            .info
+              .name
+                .select-profile
+                  label.checkbox.large
+                    input(type="checkbox" name="profiles-select")
+                    span.check-icon
+                    span.check-text Елизаветочка
+              .tel: a(href="#") +7 890 453 45 45
+              .buttons
+                button.edit Редактировать
+                button.remove Удалить
+              .status.offline Анкета отключена
+              .buttons
+                button.enable Включить
+              .vip.disabled
+                a(href="#").vip-status
+                  .icon
+                  .small СДЕЛАТЬ
+                  .label VIP СТАТУС
+            .bottom
+              .row
+                .position
+                  span.label Позиция:
+                  span.value 13-16
+                .tax
+                  span.label Тариф:
+                  span.value 125 руб/час
+              .row
+                a(href="#change").call-change.change Изменить тариф
+        .grid-column
+          .item
+            .image
+              a(href="#" style="background-image: url('girls/9.jpg')").url-image.block
+            .info
+              .name
+                .select-profile
+                  label.checkbox.large
+                    input(type="checkbox" name="profiles-select")
+                    span.check-icon
+                    span.check-text Елизаветочка
+              .tel: a(href="#") +7 890 453 45 45
+              .buttons
+                button.edit Редактировать
+                button.remove Удалить
+              .status.online Анкета включена
+              .buttons
+                button.disable Отключить
+              .vip.actived
+                .vip-status
+                  .icon
+                  .label VIP СТАТУС
+                  .cost расход <b>250</b> руб/час
+            .bottom
+              .row
+                .position
+                  span.label Позиция:
+                  span.value 13-16
+                .tax
+                  span.label Тариф:
+                  span.value 125 руб/час
+              .row
+                a(href="#change").call-change.change Изменить тариф
+        .grid-column
+          .item
+            .image
+              a(href="#" style="background-image: url('girls/15.jpg')").url-image.block
+            .info
+              .name
+                .select-profile
+                  label.checkbox.large
+                    input(type="checkbox" name="profiles-select")
+                    span.check-icon
+                    span.check-text Елизаветочка
+              .tel: a(href="#") +7 890 453 45 45
+              .buttons
+                button.edit Редактировать
+                button.remove Удалить
+              .status.offline Анкета отключена
+              .buttons
+                button.enable Включить
+              .vip.disabled
+                a(href="#").vip-status
+                  .icon
+                  .small СДЕЛАТЬ
+                  .label VIP СТАТУС
+            .bottom
+              .row
+                .position
+                  span.label Позиция:
+                  span.value 13-16
+                .tax
+                  span.label Тариф:
+                  span.value 125 руб/час
+              .row
+                a(href="#change").call-change.change Изменить тариф
+      include ../modules/paginations/m_paginations
+      #change.m_change-popup.popup.zoom-anim-dialog.mfp-hide
+        .modal-heading Изменить тариф
+        .paragraph.center Вы можете установить произвольный тариф. Чем выше тариф, тем выше позиция анкеты на сайте.
+        .range-slider
+          .row
+            .min 1
+            .max 250
+            #slider-format
+          .row
+            .tax
+              span.label Тариф:
+              .input
+                input(type="text")#input-format
+                span.bold руб/час
+            .position
+              span.label Позиция:
+              #pos 116-222
+          .row
+            button(type="submit" class="btn-lead submit") Сохранить

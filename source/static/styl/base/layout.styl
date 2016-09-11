@@ -12,10 +12,14 @@ body
   background #fff
   margin-bottom $footer + 30
   background url("../images/background.png") repeat 0 0
+  @media screen and (min-width: 768px) and (max-width: 992px)
+    margin-bottom 400px
   html.no-touchevents &
     background-attachment fixed
 footer
   height $footer
+  @media screen and (min-width: 768px) and (max-width: 992px)
+    height 370px
 .container,
 .wrapper
   clearfix()
@@ -53,6 +57,10 @@ footer
       float left
       width 20%
       padding-right 15px
+      &.large
+        width 24%
+        & + aside.m_partnership + main
+          width 56%
     & + aside.m_partnership
       display none
       @media LG

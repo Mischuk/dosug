@@ -73,7 +73,7 @@ function partnershipPriceCalc() {
 partnershipPriceCalc();
 
 // Map for profile add
-if ( $('#map').length ) {
+if ( $('.m_profile-add #map').length ) {
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
       center: [59.22, 39.89],

@@ -12,7 +12,6 @@ html(lang="ru").no-js
     link(rel="icon" href="favicon.ico" type="image/x-icon")
     link(rel="stylesheet" href=project+"/css/plugins.css")
     link(rel="stylesheet" href=project+"/css/app.css")
-    script(src=project+'/js/modernizr.js')
   body
     // Mobile buttons
     .mobile-sidebar-trigger
@@ -29,6 +28,7 @@ html(lang="ru").no-js
       block content
     include ../footer/m_footer
     // JS
+    script(src=project+'/js/modernizr.js')
     script(src=project+'/js/jquery.min.js')
     script(src=project+'/js/plugins.js')
     script(src=project+'/js/app.js')

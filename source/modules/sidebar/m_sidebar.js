@@ -7,3 +7,13 @@ function sidebar() {
   });
 };
 sidebar();
+
+function profileImages() {
+  $('.profile-sidebar .images .item').magnificPopup({
+    type: 'image',
+    gallery:{
+      enabled:true
+    }
+  });
+};
+profileImages();

@@ -1,0 +1,58 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Регистрация
+
+block breadcrumbs
+  -
+    var breadcrumbs = [
+      {link: 'Все проститутки Москвы'},
+      {link: 'Регистрация'}
+    ]
+  include ../modules/breadcrumbs/m_breadcrumbs
+
+block content
+  // Partnership banners
+  aside.m_partnership
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+1")
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+2")
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+3")
+  // Content
+  main
+    .m_signup
+      form.default-form.l-bg
+        h1 Регистрация
+        .row
+          label
+            span.label Ваш ник
+            div.input
+              input.text(type="text", placeholder="")
+        .row
+          label
+            span.label Ваш пароль
+            div.input
+              input.text(type="password", placeholder="")
+        .row
+          label
+            span.label Повторите пароль
+            div.input
+              input.text(type="password", placeholder="")
+        .row
+          label
+            span.label Ваш e-mail
+            div.input
+              input.text(type="email", placeholder="")
+        .row
+          label
+            span.label: .s-xs-hidden &nbsp;
+            div.input
+              .grid-row
+                .grid-column
+                  div CAPTCHA
+                .grid-column
+                  input.text(type="email", placeholder="")
+        .row
+          label
+            span.label: .s-xs-hidden &nbsp;
+            div.input
+              input(class="submit btn-lead" type="submit" value="Зарегистроваться")

@@ -169,3 +169,27 @@ form.default-form
         &:last-child
           width 100%
           margin-left 0
+  .columns
+    clearfix()
+    .column-large
+      @media SM
+        float left
+        width 75%
+    .column-small
+      @media screen and (min-width: 568px)
+        padding-left 48%
+        .input.file
+          width 100%
+      @media SM
+        float left
+        width 25%
+        padding-left 15px
+  .submit-center
+    text-align center
+    @media screen and (min-width: 568px)
+      width 100%
+      padding-left 48%
+      text-align left
+    @media SM
+      padding-right 25%
+      text-align right

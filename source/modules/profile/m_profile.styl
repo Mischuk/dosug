@@ -1,0 +1,57 @@
+.m_profile
+  .lead
+    padding-left 0
+    padding-right 0
+    .m_girls
+      .item
+        box-shadow none
+        .info,
+        .parameters
+          @media screen and (min-width: 568px)
+            width 50% !important
+        .parameters
+          padding 15px
+          float left
+          width 100%
+          .row
+            padding 6px 0
+            @media screen and (min-width: 568px)
+              padding 6px 0
+          .label, .value
+            display inline-block
+            vertical-align middle
+            @media SM
+              float left
+              width 50%
+          .label
+            color #999999
+          .value
+            semibold()
+  .services
+    > .section-title
+      margin-bottom 15px
+    ul
+      li
+        position relative
+        padding 5px 0 5px 25px
+        &.yes
+          &:after
+            content ''
+            background: url('../images/sprite.png') no-repeat -50px -100px;
+            width: 15px;
+            height: 11px;
+            position absolute
+            left 0
+            top 11px
+        &.no
+          color #cccccc
+          &:after
+            content ""
+            background: url('../images/sprite.png') no-repeat 0 -200px;
+            width: 11px;
+            height: 11px;
+            position absolute
+            left 0
+            top 11px
+    #profile-map
+      height 220px

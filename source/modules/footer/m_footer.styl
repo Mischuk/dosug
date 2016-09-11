@@ -59,13 +59,28 @@
     nav,
     .latest-articles
       display none
-      @media MD
+      @media SM
         display block
     nav
+      @media screen and (min-width: 768px) and (max-width: 992px)
+        ul
+          text-align center
+          margin-top 15px
+          margin-bottom 30px
+          li
+            display inline-block
+            vertical-align middle
+            &:after
+              display none
       @media MD
         float left
         width 30%
     .latest-articles
+      @media screen and (min-width: 768px) and (max-width: 992px)
+        text-align center
+        li
+          &:after
+            display none
       @media MD
         float left
         width 70%

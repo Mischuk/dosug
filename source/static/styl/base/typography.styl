@@ -19,10 +19,14 @@ h2
 
 .section-title
   semibold()
+  clearfix()
   position relative
   padding-bottom 30px
   font-style italic
   font-size 30px
+  &.medium
+    font-size 24px
+    padding-bottom 15px
   &.small
     font-size 20px
     padding 15px 0
@@ -34,7 +38,13 @@ h2
       font-size 18px
   &.border
     border-bottom 1px solid $border
-
+  .btn-lead
+    display block
+    margin-top 10px
+    @media screen and (min-width: 768px)
+      margin-top 0
+      float right
+      width 210px
 a
   color $link
   &:hover
@@ -55,6 +65,8 @@ a
   padding-top 15px
   &.large
     font-size 18px
+  &.center
+    text-align center
 
 .remark
   font-size 13px
@@ -64,3 +76,81 @@ a
     margin-top -15px
     @media screen and (min-width: 568px)
       margin-top 0
+
+article
+  a
+    text-decoration underline
+  img
+    width 100%
+    height auto
+    @media screen and (min-width: 568px)
+      float left
+      max-width 50%
+      margin-right 15px
+    & + ul
+      margin-bottom 30px
+      li
+        position relative
+        padding-left 15px
+        margin-bottom 5px
+        &:after
+          display none
+        &:last-child
+          margin-bottom 0
+        span:after
+          content ''
+          width 7px
+          height 7px
+          background $base-color
+          transform rotate(45deg)
+          position absolute
+          left 0
+          top 8px
+      a
+        position relative
+        text-decoration none
+        padding-left 15px
+        span
+          border-bottom 1px dashed
+          &:hover
+            color #333
+            border-bottom 1px solid
+  ul
+    li
+      position relative
+      padding-left 15px
+      margin-bottom 5px
+      &:last-child
+        margin-bottom 0
+      &:after
+        content ''
+        width 7px
+        height 7px
+        background $base-color
+        transform rotate(45deg)
+        position absolute
+        left 0
+        top 8px
+  ol
+    li
+      counter-increment step-counter
+      margin-bottom 15px
+      &:before
+        content: counter(step-counter);
+        margin-right: 5px;
+        margin-bottom 4px
+        font-size: 80%;
+        background-color: $base-color;
+        color: white;
+        font-weight: bold;
+        padding: 3px 8px;
+  p
+    margin-top 0
+  h2, h3
+    semibold()
+    margin 20px 0 10px 0
+  h2
+    font-size 24px
+  h3
+    font-size 18px
+

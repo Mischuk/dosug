@@ -27,6 +27,7 @@
   input[type="checkbox"]
     & + .check-icon
       cursor pointer
+      background #fff
       & + .check-label
         user-select-none()
         display inline-block
@@ -42,3 +43,15 @@
       transform scale(1) rotate(0deg)
     & + .check-icon + .check-label
       color $base-text-dark
+  &.large
+    display block
+    height 30px
+    input[type="checkbox"]
+      & + .check-icon
+        width 25px
+        height 25px
+        top 50%
+        margin-top -(@height/2)
+        & + .check-label
+          padding-top 0
+          line-height 30px

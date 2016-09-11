@@ -1,0 +1,69 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Форум
+
+block breadcrumbs
+  -
+    var breadcrumbs = [
+      {link: 'Все проститутки Москвы'},
+      {link: 'Форум'},
+      {link: 'Нежный ласковый минет 1000'}
+    ]
+  include ../modules/breadcrumbs/m_breadcrumbs
+
+block content
+  // Partnership banners
+  aside.m_partnership
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+1")
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+2")
+    a(href="#"): img(src="http://placehold.it/221x300?text=Ads+3")
+  // Content
+  main
+    .m_forum
+      .m_comments.l-bg.forum-post-lead
+        h1 Нежный ласковый минет 1000. тел.8-930-809-94-43
+        .comments-box
+          .comment
+            .user-image
+              a(href="#"): img(src="girls/5.jpg", alt="")
+            .user-message
+              .message
+                p В своих тайных желаниях ты мечтаешь стать девушкой и одевать чулки, платья, нижнее бельё, красить губы помадкой? Фантазируешь как на коленях перед Госпожой, вымаливая получить хочть капельку удовольствия трешься своим телом о сексуальные ножки? Все твои мечты осуществятся в приватном общении с прямо
+              .bottom
+                .user-name: a(href="#") malina
+                .post-date 30.05.2016
+      .forum-add-post.l-bg
+        .section-title.bold Написать ответ
+        .add-post
+          .user-image
+            a(href="#"): img(src="girls/2.jpg", alt="")
+          form.default-form.full-width
+            textarea
+            .row
+              .input
+                button(class="btn-lead" type="submit") Создать тему
+
+
+
+      .m_comments.l-bg
+        .section-title.bold.border Ответы
+        .comments-box
+          .comment
+            .user-image
+              a(href="#"): img(src="girls/user-1.jpg", alt="")
+            .user-message
+              .message
+                p В своих тайных желаниях ты мечтаешь стать девушкой и одевать чулки, платья, нижнее бельё, красить губы помадкой? Фантазируешь как на коленях перед Госпожой, вымаливая получить хочть капельку удовольствия трешься своим телом о сексуальные ножки? Все твои мечты осуществятся в приватном общении с прямо
+              .bottom
+                .user-name: a(href="#") malina
+                .post-date 30.05.2016
+          .comment
+            .user-image
+              a(href="#"): img(src="girls/user-1.jpg", alt="")
+            .user-message
+              .message В своих тайных желаниях ты мечтаешь стать девушкой и одевать чулки, платья, нижнее бельё, красить губы помадкой? Фантазируешь как на коленях перед Госпожой, вымаливая получить хочть капельку удовольствия трешься своим телом о сексуальные ножки? Все твои мечты осуществятся в приватном общении с прямо
+              .bottom
+                .user-name: a(href="#") sexmachine
+                .post-date 30.05.2016
+        include ../modules/paginations/m_paginations
